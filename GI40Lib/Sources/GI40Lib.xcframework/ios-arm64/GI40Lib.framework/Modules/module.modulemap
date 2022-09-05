@@ -1,0 +1,11 @@
+framework module GI40Lib {
+  umbrella header "GI40Lib.h"
+
+  export *
+  module * { export * }
+}
+
+module GI40Lib.Swift {
+    header "GI40Lib-Swift.h"
+    requires objc
+}

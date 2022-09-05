@@ -1,0 +1,1282 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name GI40Lib
+import AVFoundation
+import Alamofire
+import AlamofireImage
+import Apollo
+import Foundation
+@_exported import GI40Lib
+import JavaScriptCore
+import MatomoTracker
+import QuartzCore
+import Realm
+import RealmSwift
+import SafariServices
+import Security
+import Swift
+import SystemConfiguration
+import UIKit
+import Vision
+import XLActionController
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MedicineSection : RealmSwift.Object {
+  @objc dynamic public var title: Swift.String?
+  @objc dynamic public var content: Swift.String?
+  @objc dynamic public var owner: GI40Lib.Medicine?
+  @objc deinit
+}
+public protocol MedicineVCDelegate {
+  func didSetMedicine(medicine: GI40Lib.Medicine?)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Medicine : RealmSwift.Object, GI40Lib.Mappable {
+  required public init?(map: GI40Lib.Map)
+  public func mapping(map: GI40Lib.Map)
+  @objc dynamic public var creationDate: Swift.Int
+  @objc dynamic public var modificationdate: Swift.Int
+  @objc dynamic public var lastUpdated: Swift.Int
+  @objc dynamic public var pimcoreObjectId: Swift.Int
+  @objc dynamic public var giName: Swift.String?
+  @objc dynamic public var giid: Swift.String?
+  @objc dynamic public var company: Swift.String?
+  @objc dynamic public var timeliness: Swift.String?
+  @objc dynamic public var ingredients: Swift.String?
+  @objc dynamic public var headline: Swift.String?
+  @objc dynamic public var indicationsTitle: Swift.String?
+  @objc dynamic public var indicationsText: Swift.String?
+  @objc dynamic public var precautionsTitle: Swift.String?
+  @objc dynamic public var precautionsText: Swift.String?
+  @objc dynamic public var applicationTitle: Swift.String?
+  @objc dynamic public var applicationText: Swift.String?
+  @objc dynamic public var adversereactionTitle: Swift.String?
+  @objc dynamic public var adversereactionText: Swift.String?
+  @objc dynamic public var storageTitle: Swift.String?
+  @objc dynamic public var storageText: Swift.String?
+  @objc dynamic public var additionalInfoTitle: Swift.String?
+  @objc dynamic public var additionalInfoContent: Swift.String?
+  @objc dynamic public var userAdviceTitle: Swift.String?
+  @objc dynamic public var userAdviceContent: Swift.String?
+  @objc dynamic public var header: Swift.String?
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc deinit
+}
+public enum MappingType {
+  case fromJSON
+  case toJSON
+  public static func == (a: GI40Lib.MappingType, b: GI40Lib.MappingType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class Mapper<N> where N : GI40Lib.BaseMappable {
+  final public var context: GI40Lib.MapContext?
+  final public var shouldIncludeNilValues: Swift.Bool
+  public init(context: GI40Lib.MapContext? = nil, shouldIncludeNilValues: Swift.Bool = false)
+  final public func map(JSONObject: Any?, toObject object: N) -> N
+  final public func map(JSONString: Swift.String, toObject object: N) -> N
+  final public func map(JSON: [Swift.String : Any], toObject object: N) -> N
+  final public func map(JSONString: Swift.String) -> N?
+  final public func map(JSONObject: Any?) -> N?
+  final public func map(JSON: [Swift.String : Any]) -> N?
+  final public func mapArray(JSONString: Swift.String) -> [N]?
+  final public func mapArray(JSONObject: Any?) -> [N]?
+  final public func mapArray(JSONArray: [[Swift.String : Any]]) -> [N]
+  final public func mapDictionary(JSONString: Swift.String) -> [Swift.String : N]?
+  final public func mapDictionary(JSONObject: Any?) -> [Swift.String : N]?
+  final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]]) -> [Swift.String : N]?
+  final public func mapDictionary(JSONObject: Any?, toDictionary dictionary: [Swift.String : N]) -> [Swift.String : N]
+  final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]], toDictionary dictionary: [Swift.String : N]) -> [Swift.String : N]
+  final public func mapDictionaryOfArrays(JSONObject: Any?) -> [Swift.String : [N]]?
+  final public func mapDictionaryOfArrays(JSON: [Swift.String : [[Swift.String : Any]]]) -> [Swift.String : [N]]?
+  final public func mapArrayOfArrays(JSONObject: Any?) -> [[N]]?
+  public static func parseJSONStringIntoDictionary(JSONString: Swift.String) -> [Swift.String : Any]?
+  public static func parseJSONString(JSONString: Swift.String) -> Any?
+  @objc deinit
+}
+extension GI40Lib.Mapper {
+  final public func map(JSONfile: Swift.String) -> N?
+  final public func mapArray(JSONfile: Swift.String) -> [N]?
+}
+extension GI40Lib.Mapper {
+  final public func toJSON(_ object: N) -> [Swift.String : Any]
+  final public func toJSONArray(_ array: [N]) -> [[Swift.String : Any]]
+  final public func toJSONDictionary(_ dictionary: [Swift.String : N]) -> [Swift.String : [Swift.String : Any]]
+  final public func toJSONDictionaryOfArrays(_ dictionary: [Swift.String : [N]]) -> [Swift.String : [[Swift.String : Any]]]
+  final public func toJSONString(_ object: N, prettyPrint: Swift.Bool = false) -> Swift.String?
+  final public func toJSONString(_ array: [N], prettyPrint: Swift.Bool = false) -> Swift.String?
+  public static func toJSONString(_ JSONObject: Any, prettyPrint: Swift.Bool) -> Swift.String?
+  public static func toJSONData(_ JSONObject: Any, options: Foundation.JSONSerialization.WritingOptions) -> Foundation.Data?
+}
+extension GI40Lib.Mapper where N : Swift.Hashable {
+  final public func mapSet(JSONString: Swift.String) -> Swift.Set<N>?
+  final public func mapSet(JSONObject: Any?) -> Swift.Set<N>?
+  final public func mapSet(JSONArray: [[Swift.String : Any]]) -> Swift.Set<N>
+  final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
+  final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SearchVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UISearchBarDelegate {
+  @_Concurrency.MainActor(unsafe) public var defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem?
+  @_Concurrency.MainActor(unsafe) public static func create(defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem? = nil) -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) public static func create(manufacturer: GI40Lib.ManufacturerElement) -> GI40Lib.SearchVC
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBarShouldEndEditing(_ searchBar: UIKit.UISearchBar) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+open class TransformOf<ObjectType, JSONType> : GI40Lib.TransformType {
+  public typealias Object = ObjectType
+  public typealias JSON = JSONType
+  public init(fromJSON: @escaping (JSONType?) -> ObjectType?, toJSON: @escaping (ObjectType?) -> JSONType?)
+  open func transformFromJSON(_ value: Any?) -> ObjectType?
+  open func transformToJSON(_ value: ObjectType?) -> JSONType?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class HistoryVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) public static func create() -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, commit editingStyle: UIKit.UITableViewCell.EditingStyle, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol TransformType {
+  associatedtype Object
+  associatedtype JSON
+  func transformFromJSON(_ value: Any?) -> Self.Object?
+  func transformToJSON(_ value: Self.Object?) -> Self.JSON?
+}
+open class URLTransform : GI40Lib.TransformType {
+  public typealias Object = Foundation.URL
+  public typealias JSON = Swift.String
+  public init(shouldEncodeURLString: Swift.Bool = false, allowedCharacterSet: Foundation.CharacterSet = .urlQueryAllowed)
+  open func transformFromJSON(_ value: Any?) -> Foundation.URL?
+  open func transformToJSON(_ value: Foundation.URL?) -> Swift.String?
+  @objc deinit
+}
+public protocol BaseMappable {
+  mutating func mapping(map: GI40Lib.Map)
+}
+public protocol Mappable : GI40Lib.BaseMappable {
+  init?(map: GI40Lib.Map)
+}
+public protocol StaticMappable : GI40Lib.BaseMappable {
+  static func objectForMapping(map: GI40Lib.Map) -> GI40Lib.BaseMappable?
+}
+extension GI40Lib.Mappable {
+  public init?(JSONString: Swift.String, context: GI40Lib.MapContext? = nil)
+  public init?(JSON: [Swift.String : Any], context: GI40Lib.MapContext? = nil)
+}
+extension GI40Lib.BaseMappable {
+  public func toJSON() -> [Swift.String : Any]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+extension Swift.Array where Element : GI40Lib.BaseMappable {
+  public init?(JSONString: Swift.String, context: GI40Lib.MapContext? = nil)
+  public init(JSONArray: [[Swift.String : Any]], context: GI40Lib.MapContext? = nil)
+  public func toJSON() -> [[Swift.String : Any]]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+extension Swift.Set where Element : GI40Lib.BaseMappable {
+  public init?(JSONString: Swift.String, context: GI40Lib.MapContext? = nil)
+  public init?(JSONArray: [[Swift.String : Any]], context: GI40Lib.MapContext? = nil)
+  public func toJSON() -> [[Swift.String : Any]]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+public protocol ImmutableMappable : GI40Lib.BaseMappable {
+  init(map: GI40Lib.Map) throws
+}
+extension GI40Lib.ImmutableMappable {
+  public func mapping(map: GI40Lib.Map)
+  public init(JSONString: Swift.String, context: GI40Lib.MapContext? = nil) throws
+  public init(JSON: [Swift.String : Any], context: GI40Lib.MapContext? = nil) throws
+  public init(JSONObject: Any, context: GI40Lib.MapContext? = nil) throws
+}
+extension GI40Lib.Map {
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> Transform.Object where Transform : GI40Lib.TransformType
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T? where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T] where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T]? where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T where T : GI40Lib.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T? where T : GI40Lib.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T] where T : GI40Lib.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T]? where T : GI40Lib.BaseMappable
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Transform.Object] where Transform : GI40Lib.TransformType
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : T] where T : GI40Lib.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : T]? where T : GI40Lib.BaseMappable
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : Transform.Object] where Transform : GI40Lib.TransformType
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[T]]? where T : GI40Lib.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[T]] where T : GI40Lib.BaseMappable
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[Transform.Object]] where Transform : GI40Lib.TransformType
+}
+extension GI40Lib.Mapper where N : GI40Lib.ImmutableMappable {
+  final public func map(JSON: [Swift.String : Any]) throws -> N
+  final public func map(JSONString: Swift.String) throws -> N
+  final public func map(JSONObject: Any) throws -> N
+  final public func mapArray(JSONArray: [[Swift.String : Any]]) throws -> [N]
+  final public func mapArray(JSONString: Swift.String) throws -> [N]
+  final public func mapArray(JSONObject: Any) throws -> [N]
+  final public func mapDictionary(JSONString: Swift.String) throws -> [Swift.String : N]
+  final public func mapDictionary(JSONObject: Any?) throws -> [Swift.String : N]
+  final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]]) throws -> [Swift.String : N]
+  final public func mapDictionaryOfArrays(JSONObject: Any?) throws -> [Swift.String : [N]]
+  final public func mapDictionaryOfArrays(JSON: [Swift.String : [[Swift.String : Any]]]) throws -> [Swift.String : [N]]
+  final public func mapArrayOfArrays(JSONObject: Any?) throws -> [[N]]
+}
+public protocol ScanVCDelegate {
+  func codeFoundNoInternet()
+}
+@_hasMissingDesignatedInitializers public class GI40Library {
+  public static let sharedInstance: GI40Lib.GI40Library
+  public static var apiKey: Swift.String? {
+    get
+  }
+  public static var trackingID: Swift.String? {
+    get
+  }
+  public func initLib(navigationController: UIKit.UINavigationController)
+  public static func getLibraryBundle() -> Foundation.Bundle?
+  public func localizedString(key: Swift.String) -> Swift.String
+  @objc deinit
+}
+extension GI40Lib.GI40Library {
+  @_hasMissingDesignatedInitializers public class Delegates {
+    public static var medicineDetailVCDelegate: GI40Lib.MedicineDetailVCDelegate?
+    public static var medicineVCDelegate: GI40Lib.MedicineVCDelegate?
+    public static var searchVCDelegate: GI40Lib.SearchVCDelegate?
+    public static var scanVCDelegate: GI40Lib.ScanVCDelegate?
+    @objc deinit
+  }
+}
+public func show(whisper message: GI40Lib.Message, to: UIKit.UINavigationController, action: GI40Lib.WhisperAction = .show)
+public func show(shout announcement: GI40Lib.Announcement, to: UIKit.UIViewController, completion: (() -> Swift.Void)? = nil)
+public func show(whistle murmur: GI40Lib.Murmur, action: GI40Lib.WhistleAction = .show(1.5))
+public func hide(whisperFrom from: UIKit.UINavigationController, after: Foundation.TimeInterval = 0)
+public func hide(whistleAfter after: Foundation.TimeInterval = 0)
+extension Alamofire.DataRequest {
+  public static func ObjectMapperSerializer<T>(_ keyPath: Swift.String?, mapToObject object: T? = nil, context: GI40Lib.MapContext? = nil) -> GI40Lib.MappableResponseSerializer<T> where T : GI40Lib.BaseMappable
+  public static func ObjectMapperImmutableSerializer<T>(_ keyPath: Swift.String?, context: GI40Lib.MapContext? = nil) -> GI40Lib.MappableResponseSerializer<T> where T : GI40Lib.ImmutableMappable
+  @discardableResult
+  public func responseObject<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, mapToObject object: T? = nil, context: GI40Lib.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<T>) -> Swift.Void) -> Self where T : GI40Lib.BaseMappable
+  @discardableResult
+  public func responseObject<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, mapToObject object: T? = nil, context: GI40Lib.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<T>) -> Swift.Void) -> Self where T : GI40Lib.ImmutableMappable
+  public static func ObjectMapperArraySerializer<T>(_ keyPath: Swift.String?, context: GI40Lib.MapContext? = nil) -> GI40Lib.MappableArrayResponseSerializer<T> where T : GI40Lib.BaseMappable
+  public static func ObjectMapperImmutableArraySerializer<T>(_ keyPath: Swift.String?, context: GI40Lib.MapContext? = nil) -> GI40Lib.MappableArrayResponseSerializer<T> where T : GI40Lib.ImmutableMappable
+  @discardableResult
+  public func responseArray<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, context: GI40Lib.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<[T]>) -> Swift.Void) -> Self where T : GI40Lib.BaseMappable
+  @discardableResult
+  public func responseArray<T>(queue: Dispatch.DispatchQueue = .main, keyPath: Swift.String? = nil, context: GI40Lib.MapContext? = nil, completionHandler: @escaping (Alamofire.AFDataResponse<[T]>) -> Swift.Void) -> Self where T : GI40Lib.ImmutableMappable
+}
+final public class MappableResponseSerializer<T> : Alamofire.ResponseSerializer where T : GI40Lib.BaseMappable {
+  final public let decoder: Alamofire.DataDecoder
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod>
+  final public let keyPath: Swift.String?
+  final public let context: GI40Lib.MapContext?
+  final public let object: T?
+  final public let serializeCallback: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> T
+  public init(_ keyPath: Swift.String?, mapToObject object: T? = nil, context: GI40Lib.MapContext? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = MappableResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod> = MappableResponseSerializer.defaultEmptyRequestMethods, serializeCallback: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> T)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> T
+  public typealias SerializedObject = T
+  @objc deinit
+}
+final public class MappableArrayResponseSerializer<T> : Alamofire.ResponseSerializer where T : GI40Lib.BaseMappable {
+  final public let decoder: Alamofire.DataDecoder
+  final public let emptyResponseCodes: Swift.Set<Swift.Int>
+  final public let emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod>
+  final public let keyPath: Swift.String?
+  final public let context: GI40Lib.MapContext?
+  final public let serializeCallback: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> [T]
+  public init(_ keyPath: Swift.String?, context: GI40Lib.MapContext? = nil, serializeCallback: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) throws -> [T], emptyResponseCodes: Swift.Set<Swift.Int> = MappableArrayResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<Alamofire.HTTPMethod> = MappableArrayResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> [T]
+  public typealias SerializedObject = [T]
+  @objc deinit
+}
+public protocol SearchVCDelegate {
+  func searchForMedicineNoInternet(manufacturerId: Swift.Int64)
+  func searchBarTextDidChangeNoInternet(searchText: Swift.String)
+  func searchedForMedicine(manufacturerName: Swift.String, searchResultCount: Swift.Int)
+  func searchedForMedicineName(searchText: Swift.String, searchResultCount: Swift.Int)
+}
+public struct Message {
+  public var title: Swift.String
+  public var textColor: UIKit.UIColor
+  public var backgroundColor: UIKit.UIColor
+  public var images: [UIKit.UIImage]?
+  public init(title: Swift.String, textColor: UIKit.UIColor = UIColor.white, backgroundColor: UIKit.UIColor = UIColor.lightGray, images: [UIKit.UIImage]? = nil)
+}
+public struct Announcement {
+  public var title: Swift.String
+  public var subtitle: Swift.String?
+  public var image: UIKit.UIImage?
+  public var duration: Foundation.TimeInterval
+  public var action: (() -> Swift.Void)?
+  public init(title: Swift.String, subtitle: Swift.String? = nil, image: UIKit.UIImage? = nil, duration: Foundation.TimeInterval = 2, action: (() -> Swift.Void)? = nil)
+}
+public struct Murmur {
+  public var title: Swift.String
+  public var backgroundColor: UIKit.UIColor
+  public var titleColor: UIKit.UIColor
+  public var font: UIKit.UIFont
+  public var action: (() -> Swift.Void)?
+  public init(title: Swift.String, backgroundColor: UIKit.UIColor = ColorList.Whistle.background, titleColor: UIKit.UIColor = ColorList.Whistle.title, font: UIKit.UIFont = FontList.Whistle.title, action: (() -> Swift.Void)? = nil)
+}
+public struct DictionaryTransform<Key, Value> : GI40Lib.TransformType where Key : Swift.Hashable, Key : Swift.RawRepresentable, Value : GI40Lib.Mappable, Key.RawValue == Swift.String {
+  public init()
+  public func transformFromJSON(_ value: Any?) -> [Key : Value]?
+  public func transformToJSON(_ value: [Key : Value]?) -> Any?
+  public typealias JSON = Any
+  public typealias Object = Swift.Dictionary<Key, Value>
+}
+@objc public protocol ZoomImageExports : JavaScriptCore.JSExport {
+  @objc func getName(_ val: JavaScriptCore.JSValue)
+}
+@_hasMissingDesignatedInitializers @objc public class ZoomImage : ObjectiveC.NSObject, GI40Lib.ZoomImageExports {
+  @objc public func getName(_ val: JavaScriptCore.JSValue)
+  @objc deinit
+}
+public struct MedicinePageInfo {
+}
+public enum AffectedButton {
+  case scrollDown
+  case fontSize
+  public static func == (a: GI40Lib.AffectedButton, b: GI40Lib.AffectedButton) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineDetailVC : UIKit.UIViewController, UIKit.UIScrollViewDelegate, UIKit.UIWebViewDelegate, UIKit.UISearchBarDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreGraphics.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreGraphics.CGPoint>)
+  @_Concurrency.MainActor(unsafe) @objc public func webViewDidFinishLoad(_ webView: UIKit.UIWebView)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+open class CodableTransform<T> : GI40Lib.TransformType where T : Swift.Decodable, T : Swift.Encodable {
+  public typealias Object = T
+  public typealias JSON = Any
+  public init()
+  open func transformFromJSON(_ value: Any?) -> GI40Lib.CodableTransform<T>.Object?
+  open func transformToJSON(_ value: T?) -> GI40Lib.CodableTransform<T>.JSON?
+  @objc deinit
+}
+public class ManufacturerElement : GI40Lib.Mappable {
+  required public init?(map: GI40Lib.Map)
+  public func mapping(map: GI40Lib.Map)
+  public var id: Swift.Int64?
+  public var name: Swift.String?
+  public var logoUrl: Swift.String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class HistoryElement : RealmSwift.Object, GI40Lib.Mappable {
+  required public init?(map: GI40Lib.Map)
+  @objc required override dynamic public init()
+  public func mapping(map: GI40Lib.Map)
+  @objc deinit
+}
+public func <- <Transform>(left: inout Transform.Object, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: Transform.Object, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout Transform.Object?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: Transform.Object?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout [Transform.Object], right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: [Transform.Object], right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout [Transform.Object]?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: [Transform.Object]?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout [Swift.String : Transform.Object], right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: [Swift.String : Transform.Object], right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout [Swift.String : Transform.Object]?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: [Swift.String : Transform.Object]?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout Transform.Object, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Transform.Object, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Transform.Object?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Transform.Object?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Swift.Array<Transform.Object>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Swift.Array<Transform.Object>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout Swift.Array<Transform.Object>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func >>> <Transform>(left: Swift.Array<Transform.Object>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable
+public func <- <Transform>(left: inout [[Transform.Object]], right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: [[Transform.Object]], right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout [[Transform.Object]]?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func >>> <Transform>(left: [[Transform.Object]]?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType
+public func <- <Transform>(left: inout Swift.Set<Transform.Object>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable, Transform.Object : Swift.Hashable
+public func >>> <Transform>(left: Swift.Set<Transform.Object>, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable, Transform.Object : Swift.Hashable
+public func <- <Transform>(left: inout Swift.Set<Transform.Object>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable, Transform.Object : Swift.Hashable
+public func >>> <Transform>(left: Swift.Set<Transform.Object>?, right: (GI40Lib.Map, Transform)) where Transform : GI40Lib.TransformType, Transform.Object : GI40Lib.BaseMappable, Transform.Object : Swift.Hashable
+public enum WhistleAction {
+  case present
+  case show(Foundation.TimeInterval)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class WhistleFactory : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) open var whistleWindow: UIKit.UIWindow {
+    get
+    set
+  }
+  public struct Dimensions {
+  }
+  @_Concurrency.MainActor(unsafe) open var titleLabelHeight: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var titleLabel: UIKit.UILabel {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var tapGestureRecognizer: UIKit.UITapGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var murmur: GI40Lib.Murmur? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var viewController: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) open var hideTimer: Foundation.Timer
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) open func whistler(_ murmur: GI40Lib.Murmur, action: GI40Lib.WhistleAction)
+  @_Concurrency.MainActor(unsafe) open func setupWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) open func setupFrames()
+  @_Concurrency.MainActor(unsafe) public func show(duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) public func present()
+  @_Concurrency.MainActor(unsafe) public func hide()
+  @_Concurrency.MainActor(unsafe) public func calm(after: Foundation.TimeInterval)
+  @objc @_Concurrency.MainActor(unsafe) public func timerDidFire()
+}
+open class DateFormatterTransform : GI40Lib.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.String
+  final public let dateFormatter: Foundation.DateFormatter
+  public init(dateFormatter: Foundation.DateFormatter)
+  open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  open func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  @objc deinit
+}
+infix operator <- : DefaultPrecedence
+infix operator >>> : DefaultPrecedence
+public func <- <T>(left: inout T, right: GI40Lib.Map)
+public func >>> <T>(left: T, right: GI40Lib.Map)
+public func <- <T>(left: inout T?, right: GI40Lib.Map)
+public func >>> <T>(left: T?, right: GI40Lib.Map)
+public func <- <T>(left: inout T, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: T, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: T?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, T>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, T>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, T>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, T>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, [T]>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, [T]>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, [T]>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, [T]>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Array<T>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Array<T>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Array<T>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Array<T>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Array<Swift.Array<T>>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Array<Swift.Array<T>>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Array<Swift.Array<T>>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func >>> <T>(left: Swift.Array<Swift.Array<T>>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable
+public func <- <T>(left: inout Swift.Set<T>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable, T : Swift.Hashable
+public func >>> <T>(left: Swift.Set<T>, right: GI40Lib.Map) where T : GI40Lib.BaseMappable, T : Swift.Hashable
+public func <- <T>(left: inout Swift.Set<T>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable, T : Swift.Hashable
+public func >>> <T>(left: Swift.Set<T>?, right: GI40Lib.Map) where T : GI40Lib.BaseMappable, T : Swift.Hashable
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class PackageInfoViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+open class HexColorTransform : GI40Lib.TransformType {
+  public typealias Object = UIKit.UIColor
+  public typealias JSON = Swift.String
+  public init(prefixToJSON: Swift.Bool = false, alphaToJSON: Swift.Bool = false)
+  open func transformFromJSON(_ value: Any?) -> GI40Lib.HexColorTransform.Object?
+  open func transformToJSON(_ value: GI40Lib.HexColorTransform.Object?) -> GI40Lib.HexColorTransform.JSON?
+  @objc deinit
+}
+open class DataTransform : GI40Lib.TransformType {
+  public typealias Object = Foundation.Data
+  public typealias JSON = Swift.String
+  public init()
+  open func transformFromJSON(_ value: Any?) -> Foundation.Data?
+  open func transformToJSON(_ value: Foundation.Data?) -> Swift.String?
+  @objc deinit
+}
+final public class GetGidocumentQuery : Apollo.GraphQLQuery {
+  final public let operationDefinition: Swift.String
+  final public let operationName: Swift.String
+  final public var id: Swift.Int?
+  final public var filter: Swift.String?
+  public init(id: Swift.Int? = nil, filter: Swift.String? = nil)
+  final public var variables: Apollo.GraphQLMap? {
+    get
+  }
+  public struct Data : Apollo.GraphQLSelectionSet {
+    public static let possibleTypes: [Swift.String]
+    public static var selections: [Apollo.GraphQLSelection] {
+      get
+    }
+    public var resultMap: Apollo.ResultMap {
+      get
+    }
+    public init(unsafeResultMap: Apollo.ResultMap)
+    public init(getGidocument: GI40Lib.GetGidocumentQuery.Data.GetGidocument? = nil, getAdditionalMaterialListing: GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing? = nil)
+    public var getGidocument: GI40Lib.GetGidocumentQuery.Data.GetGidocument? {
+      get
+      set
+    }
+    public var getAdditionalMaterialListing: GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing? {
+      get
+      set
+    }
+    public struct GetGidocument : Apollo.GraphQLSelectionSet {
+      public static let possibleTypes: [Swift.String]
+      public static var selections: [Apollo.GraphQLSelection] {
+        get
+      }
+      public var resultMap: Apollo.ResultMap {
+        get
+      }
+      public init(unsafeResultMap: Apollo.ResultMap)
+      public init(id: Apollo.GraphQLID? = nil, giid: Swift.String? = nil, company: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Company? = nil, giname: Swift.String? = nil, timeliness: Swift.String? = nil, pisstatus: Swift.String? = nil, pisversion: Swift.String? = nil, companyname: Swift.String? = nil, ingredients: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Ingredient?]? = nil, packages: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Package?]? = nil, headline: Swift.String? = nil, headertexttop: Swift.String? = nil, useradvicetitle: Swift.String? = nil, useradvicecontent: Swift.String? = nil, toctitle: Swift.String? = nil, tocentry: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Tocentry?]? = nil, headertextbottom: Swift.String? = nil, indicationstitle: Swift.String? = nil, indicationscontent: Swift.String? = nil, precautionstitle: Swift.String? = nil, precautionscontent: Swift.String? = nil, applicationtitle: Swift.String? = nil, applicationcontent: Swift.String? = nil, adversereactionstitle: Swift.String? = nil, adversereactionscontent: Swift.String? = nil, storagetitle: Swift.String? = nil, storagecontent: Swift.String? = nil, additionalinfotitle: Swift.String? = nil, additionalinfocontent: Swift.String? = nil, additionalsections: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Additionalsection?]? = nil)
+      public var __typename: Swift.String {
+        get
+        set
+      }
+      public var id: Apollo.GraphQLID? {
+        get
+        set
+      }
+      public var giid: Swift.String? {
+        get
+        set
+      }
+      public var company: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Company? {
+        get
+        set
+      }
+      public var giname: Swift.String? {
+        get
+        set
+      }
+      public var timeliness: Swift.String? {
+        get
+        set
+      }
+      public var pisstatus: Swift.String? {
+        get
+        set
+      }
+      public var pisversion: Swift.String? {
+        get
+        set
+      }
+      public var companyname: Swift.String? {
+        get
+        set
+      }
+      public var ingredients: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Ingredient?]? {
+        get
+        set
+      }
+      public var packages: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Package?]? {
+        get
+        set
+      }
+      public var headline: Swift.String? {
+        get
+        set
+      }
+      public var headertexttop: Swift.String? {
+        get
+        set
+      }
+      public var useradvicetitle: Swift.String? {
+        get
+        set
+      }
+      public var useradvicecontent: Swift.String? {
+        get
+        set
+      }
+      public var toctitle: Swift.String? {
+        get
+        set
+      }
+      public var tocentry: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Tocentry?]? {
+        get
+        set
+      }
+      public var headertextbottom: Swift.String? {
+        get
+        set
+      }
+      public var indicationstitle: Swift.String? {
+        get
+        set
+      }
+      public var indicationscontent: Swift.String? {
+        get
+        set
+      }
+      public var precautionstitle: Swift.String? {
+        get
+        set
+      }
+      public var precautionscontent: Swift.String? {
+        get
+        set
+      }
+      public var applicationtitle: Swift.String? {
+        get
+        set
+      }
+      public var applicationcontent: Swift.String? {
+        get
+        set
+      }
+      public var adversereactionstitle: Swift.String? {
+        get
+        set
+      }
+      public var adversereactionscontent: Swift.String? {
+        get
+        set
+      }
+      public var storagetitle: Swift.String? {
+        get
+        set
+      }
+      public var storagecontent: Swift.String? {
+        get
+        set
+      }
+      public var additionalinfotitle: Swift.String? {
+        get
+        set
+      }
+      public var additionalinfocontent: Swift.String? {
+        get
+        set
+      }
+      public var additionalsections: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Additionalsection?]? {
+        get
+        set
+      }
+      public struct Company : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(companyname: Swift.String? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var companyname: Swift.String? {
+          get
+          set
+        }
+      }
+      public struct Ingredient : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(ingredientname: Swift.String? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var ingredientname: Swift.String? {
+          get
+          set
+        }
+      }
+      public struct Package : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(pzn: Swift.String? = nil, gtin: Swift.String? = nil, packagename: Swift.String? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var pzn: Swift.String? {
+          get
+          set
+        }
+        public var gtin: Swift.String? {
+          get
+          set
+        }
+        public var packagename: Swift.String? {
+          get
+          set
+        }
+      }
+      public struct Tocentry : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(tocentrynumber: Swift.Int? = nil, tocentrytext: Swift.String? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var tocentrynumber: Swift.Int? {
+          get
+          set
+        }
+        public var tocentrytext: Swift.String? {
+          get
+          set
+        }
+      }
+      public struct Additionalsection : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(sectionnumber: Swift.Int? = nil, sectiontitle: Swift.String? = nil, sectioncontent: Swift.String? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var sectionnumber: Swift.Int? {
+          get
+          set
+        }
+        public var sectiontitle: Swift.String? {
+          get
+          set
+        }
+        public var sectioncontent: Swift.String? {
+          get
+          set
+        }
+      }
+    }
+    public struct GetAdditionalMaterialListing : Apollo.GraphQLSelectionSet {
+      public static let possibleTypes: [Swift.String]
+      public static var selections: [Apollo.GraphQLSelection] {
+        get
+      }
+      public var resultMap: Apollo.ResultMap {
+        get
+      }
+      public init(unsafeResultMap: Apollo.ResultMap)
+      public init(edges: [GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge?]? = nil)
+      public var __typename: Swift.String {
+        get
+        set
+      }
+      public var edges: [GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge?]? {
+        get
+        set
+      }
+      public struct Edge : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(node: GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge.Node? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var node: GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge.Node? {
+          get
+          set
+        }
+        public struct Node : Apollo.GraphQLSelectionSet {
+          public static let possibleTypes: [Swift.String]
+          public static var selections: [Apollo.GraphQLSelection] {
+            get
+          }
+          public var resultMap: Apollo.ResultMap {
+            get
+          }
+          public init(unsafeResultMap: Apollo.ResultMap)
+          public init(chapterKey: Swift.String? = nil, material: [GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge.Node.Material?]? = nil)
+          public var __typename: Swift.String {
+            get
+            set
+          }
+          public var chapterKey: Swift.String? {
+            get
+            set
+          }
+          public var material: [GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge.Node.Material?]? {
+            get
+            set
+          }
+          public struct Material : Apollo.GraphQLSelectionSet {
+            public static let possibleTypes: [Swift.String]
+            public static var selections: [Apollo.GraphQLSelection] {
+              get
+            }
+            public var resultMap: Apollo.ResultMap {
+              get
+            }
+            public init(unsafeResultMap: Apollo.ResultMap)
+            public init(label: Swift.String? = nil, url: GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge.Node.Material.Url? = nil)
+            public var __typename: Swift.String {
+              get
+              set
+            }
+            public var label: Swift.String? {
+              get
+              set
+            }
+            public var url: GI40Lib.GetGidocumentQuery.Data.GetAdditionalMaterialListing.Edge.Node.Material.Url? {
+              get
+              set
+            }
+            public struct Url : Apollo.GraphQLSelectionSet {
+              public static let possibleTypes: [Swift.String]
+              public static var selections: [Apollo.GraphQLSelection] {
+                get
+              }
+              public var resultMap: Apollo.ResultMap {
+                get
+              }
+              public init(unsafeResultMap: Apollo.ResultMap)
+              public init(text: Swift.String? = nil, path: Swift.String? = nil)
+              public var __typename: Swift.String {
+                get
+                set
+              }
+              public var text: Swift.String? {
+                get
+                set
+              }
+              public var path: Swift.String? {
+                get
+                set
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @objc deinit
+}
+public func <- <T>(left: inout T, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: T, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: T?, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [T], right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [T], right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [T]?, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [T]?, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [Swift.String : T], right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [Swift.String : T], right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [Swift.String : T]?, right: GI40Lib.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [Swift.String : T]?, right: GI40Lib.Map) where T : Swift.RawRepresentable
+open class EnumTransform<T> : GI40Lib.TransformType where T : Swift.RawRepresentable {
+  public typealias Object = T
+  public typealias JSON = T.RawValue
+  public init()
+  open func transformFromJSON(_ value: Any?) -> T?
+  open func transformToJSON(_ value: T?) -> T.RawValue?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineTableViewCell : UIKit.UITableViewCell {
+  @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct MapError : Swift.Error {
+  public var key: Swift.String?
+  public var currentValue: Any?
+  public var reason: Swift.String?
+  public var file: Swift.StaticString?
+  public var function: Swift.StaticString?
+  public var line: Swift.UInt?
+  public init(key: Swift.String?, currentValue: Any?, reason: Swift.String?, file: Swift.StaticString? = nil, function: Swift.StaticString? = nil, line: Swift.UInt? = nil)
+}
+extension GI40Lib.MapError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public class ManufacturerResult : GI40Lib.Mappable {
+  required public init?(map: GI40Lib.Map)
+  public func mapping(map: GI40Lib.Map)
+  public var returnCode: Swift.Int?
+  public var success: Swift.Bool?
+  public var manufacturerElements: [GI40Lib.ManufacturerElement]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Element : GI40Lib.Mappable {
+  public var type: Swift.String?
+  public var value: Swift.String?
+  public var name: Swift.String?
+  public var elements: [GI40Lib.Element]
+  required public init?(map: GI40Lib.Map)
+  public func mapping(map: GI40Lib.Map)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SearchManager {
+  @objc deinit
+}
+open class NSDecimalNumberTransform : GI40Lib.TransformType {
+  public typealias Object = Foundation.NSDecimalNumber
+  public typealias JSON = Swift.String
+  public init()
+  open func transformFromJSON(_ value: Any?) -> Foundation.NSDecimalNumber?
+  open func transformToJSON(_ value: Foundation.NSDecimalNumber?) -> Swift.String?
+  @objc deinit
+}
+public protocol MapContext {
+}
+final public class Map {
+  final public let mappingType: GI40Lib.MappingType
+  final public var JSON: [Swift.String : Any] {
+    get
+  }
+  final public var isKeyPresent: Swift.Bool {
+    get
+  }
+  final public var currentValue: Any? {
+    get
+  }
+  final public var currentKey: Swift.String? {
+    get
+  }
+  final public var nestedKeyDelimiter: Swift.String {
+    get
+  }
+  final public var context: GI40Lib.MapContext?
+  final public var shouldIncludeNilValues: Swift.Bool
+  final public let toObject: Swift.Bool
+  public init(mappingType: GI40Lib.MappingType, JSON: [Swift.String : Any], toObject: Swift.Bool = false, context: GI40Lib.MapContext? = nil, shouldIncludeNilValues: Swift.Bool = false)
+  final public subscript(key: Swift.String) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, delimiter delimiter: Swift.String) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool, delimiter delimiter: Swift.String) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, delimiter delimiter: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool, ignoreNil ignoreNil: Swift.Bool) -> GI40Lib.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool?, delimiter delimiter: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> GI40Lib.Map {
+    get
+  }
+  final public func value<T>() -> T?
+  @objc deinit
+}
+extension GI40Lib.Map {
+  final public func value<T>(_ key: Swift.String, default: T.Object, using transform: T) throws -> T.Object where T : GI40Lib.TransformType
+  final public func value<T>(_ key: Swift.String, default: T) throws -> T
+  final public func value<T>(_ key: Swift.String, default: [T]) -> [T] where T : GI40Lib.BaseMappable
+  final public func value<T>(_ key: Swift.String, default: T) throws -> T where T : GI40Lib.BaseMappable
+}
+public protocol NotificationControllerDelegate : AnyObject {
+  func notificationControllerWillHide()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class WhisperView : UIKit.UIView {
+  public struct Dimensions {
+    public static var height: CoreGraphics.CGFloat
+  }
+  @_Concurrency.MainActor(unsafe) open var titleLabel: UIKit.UILabel {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak open var delegate: GI40Lib.NotificationControllerDelegate?
+  @_Concurrency.MainActor(unsafe) open var height: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum MedicineRowTypes {
+  case header
+  case useradvice
+  case indications
+  case precautions
+  case application
+  case adversereaction
+  case storage
+  case additionalInfos
+  case additionalSections(numberOfSections: Swift.Int)
+  case additionalMaterial(type: GI40Lib.AdditionalMaterialType)
+}
+public enum AdditionalMaterialType {
+  case educationalMaterial
+  case ukraine
+  public static func == (a: GI40Lib.AdditionalMaterialType, b: GI40Lib.AdditionalMaterialType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UIScrollViewDelegate, UIKit.UISearchBarDelegate {
+  @_Concurrency.MainActor(unsafe) public var searchResults: [[Swift.String : Any]]
+  @_Concurrency.MainActor(unsafe) public static func create(objectId: Swift.Int) -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreGraphics.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreGraphics.CGPoint>)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBarCancelButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct ColorList {
+  public struct Shout {
+    public static var background: UIKit.UIColor
+    public static var dragIndicator: UIKit.UIColor
+    public static var title: UIKit.UIColor
+    public static var subtitle: UIKit.UIColor
+  }
+  public struct Whistle {
+    public static var background: UIKit.UIColor
+    public static var title: UIKit.UIColor
+  }
+}
+public struct FontList {
+  public struct Shout {
+    public static var title: UIKit.UIFont
+    public static var subtitle: UIKit.UIFont
+  }
+  public struct Whistle {
+    public static var title: UIKit.UIFont
+  }
+  public struct Whisper {
+    public static var title: UIKit.UIFont
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class BarCodeResult : ObjectiveC.NSObject {
+  public var pzn: Swift.String?
+  public var lot: Swift.String?
+  public var expiry: Foundation.Date?
+  public var serial: Swift.String?
+  public var isGTIN: Swift.Bool
+  @objc deinit
+}
+extension Swift.String {
+  public func stringWithouthHTMLTags() -> Swift.String
+  public var html2AttributedString: Foundation.NSMutableAttributedString? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class AdditionalSection {
+  public var order: Swift.Int
+  public var title: Swift.String
+  public var content: Swift.String
+  @objc deinit
+}
+public struct Config {
+  public static var modifyInset: Swift.Bool
+}
+open class CustomDateFormatTransform : GI40Lib.DateFormatterTransform {
+  public init(formatString: Swift.String)
+  @objc deinit
+}
+public protocol MedicineDetailVCDelegate {
+  func vcDidLoad(startIndex: Swift.Int, medicine: GI40Lib.Medicine?)
+  func scrollViewDidSetPage(page: Swift.Int, medicine: GI40Lib.Medicine?)
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+open class DateTransform : GI40Lib.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.Double
+  public enum Unit : Foundation.TimeInterval {
+    case seconds
+    case milliseconds
+    public init?(rawValue: Foundation.TimeInterval)
+    public typealias RawValue = Foundation.TimeInterval
+    public var rawValue: Foundation.TimeInterval {
+      get
+    }
+  }
+  public init(unit: GI40Lib.DateTransform.Unit = .seconds)
+  open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  open func transformToJSON(_ value: Foundation.Date?) -> Swift.Double?
+  @objc deinit
+}
+extension Foundation.DateFormatter {
+  convenience public init(withFormat format: Swift.String, locale: Swift.String)
+}
+open class ISO8601DateTransform : GI40Lib.DateFormatterTransform {
+  public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ShoutView : UIKit.UIView {
+  public struct Dimensions {
+    public static let indicatorHeight: CoreGraphics.CGFloat
+    public static let indicatorWidth: CoreGraphics.CGFloat
+    public static let imageSize: CoreGraphics.CGFloat
+    public static let imageOffset: CoreGraphics.CGFloat
+    public static var textOffset: CoreGraphics.CGFloat
+    public static var touchOffset: CoreGraphics.CGFloat
+  }
+  @_Concurrency.MainActor(unsafe) open var backgroundView: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var indicatorView: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var imageView: UIKit.UIImageView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var titleLabel: UIKit.UILabel {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var subtitleLabel: UIKit.UILabel {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var tapGestureRecognizer: UIKit.UITapGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var panGestureRecognizer: UIKit.UIPanGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var announcement: GI40Lib.Announcement? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var displayTimer: Foundation.Timer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var panGestureActive: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var shouldSilent: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var completion: (() -> ())? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) open func craft(_ announcement: GI40Lib.Announcement, to: UIKit.UIViewController, completion: (() -> ())?)
+  @_Concurrency.MainActor(unsafe) open func configureView(_ announcement: GI40Lib.Announcement)
+  @_Concurrency.MainActor(unsafe) open func shout(to controller: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) public func setupFrames()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open func silent()
+  @objc @_Concurrency.MainActor(unsafe) open func displayTimerDidFire()
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public func bounceButton()
+}
+public enum WhisperAction : Swift.String {
+  case present
+  case show
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public func <- <T>(left: inout T, right: GI40Lib.Map) where T : Swift.SignedInteger
+public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : Swift.SignedInteger
+public func <- <T>(left: inout T, right: GI40Lib.Map) where T : Swift.UnsignedInteger
+public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : Swift.UnsignedInteger
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ScanVC : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public static func create() -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension GI40Lib.MappingType : Swift.Equatable {}
+extension GI40Lib.MappingType : Swift.Hashable {}
+extension GI40Lib.AffectedButton : Swift.Equatable {}
+extension GI40Lib.AffectedButton : Swift.Hashable {}
+extension GI40Lib.AdditionalMaterialType : Swift.Equatable {}
+extension GI40Lib.AdditionalMaterialType : Swift.Hashable {}
+extension GI40Lib.DateTransform.Unit : Swift.Equatable {}
+extension GI40Lib.DateTransform.Unit : Swift.Hashable {}
+extension GI40Lib.DateTransform.Unit : Swift.RawRepresentable {}
+extension GI40Lib.WhisperAction : Swift.Equatable {}
+extension GI40Lib.WhisperAction : Swift.Hashable {}
+extension GI40Lib.WhisperAction : Swift.RawRepresentable {}
