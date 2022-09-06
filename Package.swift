@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/realm/realm-swift.git",
-            .exact("10.23.0")
+            .exact("10.25.0")
         ),
         .package(
             url: "https://github.com/apollographql/apollo-ios",

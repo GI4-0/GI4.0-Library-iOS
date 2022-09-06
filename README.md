@@ -11,14 +11,14 @@ Add the following framworks via Swift Package Manager:
 
 | Framwork              | Version                   | URL                                               |
 | --------------------- | ------------------------- | ------------------------------------------------- |
-| Realm                 | 10.23.0 - Excact Version  | https://github.com/realm/realm-swift.git          |
+| Realm                 | 10.25.0 - Excact Version  | https://github.com/realm/realm-swift.git          |
 | Apollo                | 0.51.2 - Next Major       | https://github.com/apollographql/apollo-ios       |
 | Alamofire             | 5.5.0 - Next Major        | https://github.com/Alamofire/Alamofire.git        |
 | AlamofireImage        | 4.2.0 - Next Major        | https://github.com/Alamofire/AlamofireImage.git   |
 | MatomoTracker         | 7.5.0 - Next Major        | https://github.com/matomo-org/matomo-sdk-ios.git  |
 | XLActionController    | 5.1.0 - Next Major        | https://github.com/xmartlabs/XLActionController   |
 
-If Realm causes issues, when installed via Swift Package Manager, please use the compiled binaries from GitHub (tested with binaries generated for XCode 13.3): https://github.com/realm/realm-swift/releases/download/v10.23.0/realm-swift-10.23.0.zip
+If Realm causes issues, when installed via Swift Package Manager, please use the compiled binaries from GitHub (tested with binaries generated for XCode 13.3): https://github.com/realm/realm-swift/releases/download/v10.25.0/realm-swift-10.25.0.zip
 
 ### Step 3
  Add the following lines to your info.plist:
