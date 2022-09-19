@@ -1,8 +1,10 @@
 Pod::Spec.new do |spec|
 spec.name = 'GI40Lib'
 spec.version = '1.0.1'
+spec.license = { :type => 'Commercial', :text => 'See https://github.com/GI4-0/GI4.0-Library-iOS/' }
 spec.summary = 'Library for showing patient information for medicinal products'
 spec.homepage = 'https://github.com/GI4-0/GI4.0-Library-iOS/'
+spec.authors = { 'Rote Liste® Service GmbH ' => 'info@rote-liste.de' }
 spec.documentation_url = 'https://github.com/GI4-0/GI4.0-Library-iOS/'
 spec.source = { :git => 'https://github.com/GI4-0/GI4.0-Library-iOS/', :tag => spec.version }
 spec.swift_version = '5.6.1'
