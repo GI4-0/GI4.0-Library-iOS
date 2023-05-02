@@ -6,31 +6,35 @@
 	<dict>
 		<key>AdditionalMaterialAlertCell.nib</key>
 		<data>
-		dRjC71CpYHAsrJuJ9b+T2I2e0rI=
+		AeC8AWeXDJZUitstLfOYQs0g0kc=
 		</data>
 		<key>AdditionalMaterialTableViewCell.nib</key>
 		<data>
-		82A7iRHEcod7MACqzL2pfP33FUc=
+		jwVR9p5EbocMswYhSzk4rCJc7/s=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		cIzqL0sWmn4A8mVR1GzR4lTziYQ=
+		d+AlxJTvs8MsGL1wHGeSj0RFutk=
 		</data>
 		<key>BarcodeParser.js</key>
 		<data>
 		jOizFLRFeQEMlmJgoI8Y8JlivMc=
 		</data>
+		<key>ChangedChapterTVC.nib</key>
+		<data>
+		NQ4wxpXjqdIlWefglqGdu1dv6Wk=
+		</data>
 		<key>GI40LibraryVC.nib</key>
 		<data>
-		vR+wXcdzAoopyV1wOMqt6p6qNqc=
+		kTCa/kHEUczcwdVE4dK11AVVUvA=
 		</data>
 		<key>GetGidocument.graphql</key>
 		<data>
-		mx8O3hs3ILdd+t1ebnMMFdzYGBc=
+		vGX1NzBh6vcWchxjDPFuSW6+6yY=
 		</data>
 		<key>Headers/GI40Lib-Swift.h</key>
 		<data>
-		tDNEGxjkqnC7IkF9NthW6GGphj4=
+		4ysgPOZMpaQT5KJw6+y+WA4QYW8=
 		</data>
 		<key>Headers/GI40Lib.h</key>
 		<data>
@@ -38,75 +42,91 @@
 		</data>
 		<key>HistoryTableViewCell.nib</key>
 		<data>
-		LP32nB/gzyIy4SvhtcI84xXTub0=
+		MF/2MoKndbE4HVczyJLXGy8XGzE=
 		</data>
 		<key>HistoryVC.nib</key>
 		<data>
-		0E4EqCGiLbPx5SCsNXOJbF5Uzqc=
+		xei0XRmOLl4CAYqW3XWfR3GL+Ck=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zjJwVKVY97FO57sZ/mxdZSUJz7Y=
+		ps86D3PrfJq0xhyEFh8h08MFes8=
 		</data>
 		<key>Localizable.strings</key>
 		<data>
-		M/rNUsXj3vUHJxQ/s9OfOWpIeis=
+		iZ0YtN4iKn1D++im1a0SxFNDR88=
 		</data>
 		<key>MedSearchTableViewCell.nib</key>
 		<data>
-		TrI5JU8u6xUdosAUzglBerwHOXE=
+		R3/ydku+YWLfVJXxQoaZ0FtH6Kg=
 		</data>
 		<key>MedicineDetailVC.nib</key>
 		<data>
-		bRwJZDk0p3f1kenGgnv5jrQpBzs=
+		WdWcue5f24OEsHCblVzaE5kjdbc=
 		</data>
 		<key>MedicineHeaderTableViewCell.nib</key>
 		<data>
-		UwlWFFcmfaHjtmMOSYFZhd5STCs=
+		kope1cUIvjBRWhP51ACN9y0xRPQ=
 		</data>
 		<key>MedicineTableViewCell.nib</key>
 		<data>
-		wAaiTQ8C6pQ3HA1ZtbnD6gptTNA=
+		9kJ9G/4fnp/Wno5Z+Elknh0+Agc=
 		</data>
 		<key>MedicineTitleViewCell.nib</key>
 		<data>
-		gdB+xJwErm75yqfhV0yt+G3bd3I=
+		sxSf6+Qz8xVwsBAxyII9nudcl1c=
 		</data>
 		<key>MedicineUserAdvice.nib</key>
 		<data>
-		j1m3ESEv4vVhvfj9hOnh+FGEfBg=
+		fQ231nP7U1FyIT63vbpBsG9j/SA=
 		</data>
 		<key>MedicineVC.nib</key>
 		<data>
-		35QCOIfz1kB+PStzJ906fJONars=
+		BtyGtzGFvuLwt7kzu7Qsl5SbHn4=
+		</data>
+		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		gk+1g5VJgEskyeygz5CvR9gq0fk=
+		</data>
+		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		JZbpAG/85YhrcXI22f54GpU/lnA=
 		</data>
 		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		yNp1Ba/KrJOkIsJylgNnnLDG1tE=
+		V+sNQoUWK2aH7x5d7C30zTqfqHs=
 		</data>
 		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Xx93vSBFjD4ybOjve0xfpkZOzDA=
+		JZbpAG/85YhrcXI22f54GpU/lnA=
 		</data>
 		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VlBuYegBsdha6JAHCsrJ45K4Zcg=
+		ycU/IOa5grxHUYU8GbJ/cOT7jDk=
+		</data>
+		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		gk+1g5VJgEskyeygz5CvR9gq0fk=
+		</data>
+		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		xFguFor92RsvajioUBRVWNg/kVE=
 		</data>
 		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SU7bcoHt1qTBAjcxHgylVLlrOEk=
+		1IpQJhRRbxRfDX2EPDyUN7l0SYA=
 		</data>
 		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uAiISRo99fi1K0lHPq7wSCGdOVk=
+		xFguFor92RsvajioUBRVWNg/kVE=
 		</data>
 		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PXqunjwGpfn+CzuTiFnJV3gqo9U=
+		hLEJ66otZajWQ+pUYq1Pd3J/9bw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		9JqR0DkXPVYKZF9vy91FhcqmmjU=
+		Wlg5ZPOgCx51/jkmpDIcwb8wmmI=
 		</data>
 		<key>ScanVC.nib</key>
 		<data>
@@ -114,11 +134,11 @@
 		</data>
 		<key>SearchTableViewCell.nib</key>
 		<data>
-		BDwk1Jh1FE5N1WDBe7MuXKfJeN4=
+		cL426xZUd6mcqkwDYnajKBvaIBQ=
 		</data>
 		<key>SearchVC.nib</key>
 		<data>
-		A3DjiaFKRULFFceSNseT04IYl5M=
+		I2iBTrL2pnPCGizlxIWC8LN2XFs=
 		</data>
 		<key>SearchWebView.js</key>
 		<data>
@@ -128,14 +148,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oe00WQ5rzDwwq3WPHvVLPlEkrBE=
+			OVhIPXrwCfbC4WxkbszLGRdZUVY=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>schema.json</key>
 		<data>
-		C7yIFy0XqLVyjW/GXacMZVOUuDc=
+		dY7OPbeGpegtPeEwSv+d1TyKRK0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -144,21 +164,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fg0hNPAKrs4t2ZwKrsI6BS4ZcPTBbmnXk1WhTNwdPYE=
+			7yofxQdD7GmhpkzgTQJeyBiL3IrnumuCK/0lTcmve6s=
 			</data>
 		</dict>
 		<key>AdditionalMaterialTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IyGsIthadq+gJCij4jx/xXh907FCNbasMZ6HvYGmygI=
+			BtaR0gU3h3tccKxiUkT4bNEQn68jgOfXDMBq9Uy3pus=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zLy0k1zdYW3QEpdleRIAddAdfJvzt+wr20JReZCVovk=
+			HNMYo44lHMlmitbT9D7RrmuPQKdf8kYMP6dF6rV/Ae4=
 			</data>
 		</dict>
 		<key>BarcodeParser.js</key>
@@ -168,25 +188,32 @@
 			3uT51RqnxDPiRQf7l1ITdkWDMAyQwWaJJVLp8xzDuPU=
 			</data>
 		</dict>
+		<key>ChangedChapterTVC.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			a2iZYwwp9TQ869bW7altbeIPaIGUCrYzNPayTdUdEPI=
+			</data>
+		</dict>
 		<key>GI40LibraryVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VryJGh5BTK63lN/W/XkJEV+I+KJt4b2eKMn0b53FNV0=
+			TtDyqwc9eOunlQvD+JFTkB9TInmpWedaqIidZwkJy44=
 			</data>
 		</dict>
 		<key>GetGidocument.graphql</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ObUhBz42tS5RfmkmYoO5vntixF55dad0ko+4vfVfuXM=
+			fIh8Hbh0Auw0cBpQhVT5XZYfF30MproFga1SeRFR3UY=
 			</data>
 		</dict>
 		<key>Headers/GI40Lib-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dYK53Fbb4W8Jo6dyMd1W3VwoH/eaHVRawHZhywK2eMU=
+			dmd5sd8mV6LXZSGcKt9Tgw1vVSwqpLxixjRmUQg0uck=
 			</data>
 		</dict>
 		<key>Headers/GI40Lib.h</key>
@@ -200,119 +227,147 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2CfYb+KF94hc5tGqseHp/yOL/FSw/DX3IAm+sbncwQU=
+			GijLa4pDWbj2gQxydhUbYc5r8Dje2/FdgYv/fJ/+sLw=
 			</data>
 		</dict>
 		<key>HistoryVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iZBLzFDrjGqwraT90kNJqvvqL4BHSsJqnKk8TZLV+qM=
+			0I1P/dHU2NAInhYfCmHj3PHacxnpqhj3L/32O6ypeZI=
 			</data>
 		</dict>
 		<key>Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sszZj+PfmWZqc42rUHcjs3+VtVLPgHPwW1BEAUdr7ww=
+			0TqTc2/sje9YcgbwHInZ9HxZRKIvpn5IaPT2Lkf1/Ww=
 			</data>
 		</dict>
 		<key>MedSearchTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8iwHFdNRP/87iczoxCbvwtpa4Z3C0O9LPijppRCz4mQ=
+			64PNuREI1VESH2xK/MlpcyDG10IbcRHMq8HK11mavJw=
 			</data>
 		</dict>
 		<key>MedicineDetailVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IVInft521CIvqkXiCzkX8zgDATacW3zS12CkFZde/08=
+			wTtVhVzOoEKn6HHLh5z3Llf/UVL6EuX85n/QHqqWQEc=
 			</data>
 		</dict>
 		<key>MedicineHeaderTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GXeOqvKu1TCnizYTvYVYQ+BFAk7gFXpPEDNBjaLaUbY=
+			uFNKIDDYLRBbMRUdpg2VgodlGAr6Ij4Efzz0GAyY8b0=
 			</data>
 		</dict>
 		<key>MedicineTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pPbGiAc8nhtrgD1URHKWC73X7Nb/rfPfwQhqCUAaRcs=
+			stFA3v1x9FNeucQA52PBOmHYcvrdvorU1yQop4hUS50=
 			</data>
 		</dict>
 		<key>MedicineTitleViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rdke3g5xcWqbsFuAPfMhpuXWq17/2PbqVTE93VUAneI=
+			P1c8a4D6EZ+qqlIwHMJY9tb5jS6Er6ZcsAFSumKadFY=
 			</data>
 		</dict>
 		<key>MedicineUserAdvice.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cWMyzGmQyB66kGs5LVLwnVPXBCT5InZZHtDWmzwXvsY=
+			6A9GDpJrJxiQtvBam4S4FzNFcm5na2g/WmQGqpWJ/5Q=
 			</data>
 		</dict>
 		<key>MedicineVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hSuZ5L42Rm7AUuE2RrRZWEHSfAZMbBfglRXqvaCGhAg=
+			QnA3O5DzvsCjjanX6dFOUmQTrqJU3LPg9izAH1ar/UM=
+			</data>
+		</dict>
+		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c/m9H8QYJB2weG4FfcE5TX+ZLQOnAXXGj1OCx52XFXY=
+			</data>
+		</dict>
+		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TIysSsLDBxPUQdqJ//kjP4iH6k6fEpF/pGucO6gCh/M=
 			</data>
 		</dict>
 		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M4KppNrjDVg3ygEN1CBAfPbkwdvvQgIlM7kbQCaBqhI=
+			0vTMltwP93R3/MNx6Qo+RZ/rey5DZR2Ccx2OJUR5U9k=
 			</data>
 		</dict>
 		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kI0plCG4zpuZgB31qLycN1hEYiQYAVoVdue2B2pWx7Q=
+			TIysSsLDBxPUQdqJ//kjP4iH6k6fEpF/pGucO6gCh/M=
 			</data>
 		</dict>
 		<key>Modules/GI40Lib.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RCfcLNTHYsIpaPswMbvt/E7QYzaFLsihDwk9tWMYA4w=
+			ag7rs/1nZfFz95vHsUIGPylRPiooIfCaidWC5tipl40=
+			</data>
+		</dict>
+		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c/m9H8QYJB2weG4FfcE5TX+ZLQOnAXXGj1OCx52XFXY=
+			</data>
+		</dict>
+		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			e6t13yvEBb0WSH1Cntl81/d7ojAa+YTVyij4pUg7HQ8=
 			</data>
 		</dict>
 		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CzQii5zmvpSdi6bIexRHQa3un2y1NuuBNWRSMwaXnWA=
+			UP1fo6DIkvBnpkVC+Xn/3bhbajfuptLW1BeZUtRpQmI=
 			</data>
 		</dict>
 		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			09xry4kUDhfe7PAJ/KmUzQ3eKDQBhxuM0GS/QN/Hs8k=
+			e6t13yvEBb0WSH1Cntl81/d7ojAa+YTVyij4pUg7HQ8=
 			</data>
 		</dict>
 		<key>Modules/GI40Lib.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ga3MYvL4f7y7OanPUX0unJ8jF2D7GSVnVHBMnuJBaxk=
+			D6mcTeKI1PaT9C2T9nHw+G6YZ63Fwu1VII4bUwR7r/A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OWhv6urEFEyVUS5KkSR7nc+fkJxaey8VqqD03uewPTM=
+			rrYPoU/uoMUh818q8e815Dzvt+k+b8DSNWvEvgxTEzA=
 			</data>
 		</dict>
 		<key>ScanVC.nib</key>
@@ -326,14 +381,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Y9+QbcYOMvE/pG2Ve5GaCOAjhPcAYHuF6OH29GwFss=
+			9BPWNzZ4mo9edfS7qf+SSly9puUlPX7iZRWI+Pl78bw=
 			</data>
 		</dict>
 		<key>SearchVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9keMgkBBziRYSSVyaP7AdcP4Df60N14wgBqXtMqzIIw=
+			AsEatS/awXf1un7nCTHGxHH8hzBvhRaLTbEdytT9Sws=
 			</data>
 		</dict>
 		<key>SearchWebView.js</key>
@@ -347,7 +402,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pmJHMKTErLvDVvsQV4yLQYcl9IFlUuuhEGpTn8vkhck=
+			K4fLcKktJu9YyRMaAl0L6VWNsqR2RPcN8qL20ZqY37I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -356,7 +411,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jbabHlAlC3J2Z+uCNtr8ZQQBoXXdxGeITFmGNO6nV1g=
+			47bG408DFGHa0Kamn//XS/opvXuNuIEpwbkY9NSmHV4=
 			</data>
 		</dict>
 	</dict>

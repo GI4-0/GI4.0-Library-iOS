@@ -6,6 +6,6 @@ framework module GI40Lib {
 }
 
 module GI40Lib.Swift {
-    header "GI40Lib-Swift.h"
-    requires objc
+  header "GI40Lib-Swift.h"
+  requires objc
 }

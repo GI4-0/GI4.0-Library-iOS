@@ -1,4 +1,4 @@
-query GetGidocument($id: Int){
+query GetGidocument($id: Int, $filter: String){
     getGidocument(id: $id) {
         id
         giid
@@ -11,6 +11,11 @@ query GetGidocument($id: Int){
         timeliness
         pisstatus
         pisversion
+        timelinessold
+        changedchapters {
+            id,
+            title
+        }
         companyname
         ingredients {
             ... on fieldcollection_ingredient {
@@ -56,5 +61,23 @@ query GetGidocument($id: Int){
             }
         }
     }
+    getAdditionalMaterialListing(filter: $filter) {
+        edges {
+            node {
+                chapterKey
+                material {
+                    __typename
+                    ... on block_AdditionalMaterial_material_entry {
+                        label
+                        url {
+                            text
+                        }
+                        url {
+                            path
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-
