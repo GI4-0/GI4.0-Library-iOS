@@ -5,9 +5,20 @@ query GetGidocument($id: Int, $filter: String){
         company {
             ... on object_Company {
                 companyname
+                companylogo {
+                    ... on asset {
+                        fullpath
+                        thumb: fullpath(thumbnail: "companyBrand")
+                    }
+                }
             }
         }
         giname
+        pdffile {
+            ... on asset {
+                fullpath
+            }
+        }
         timeliness
         pisstatus
         pisversion

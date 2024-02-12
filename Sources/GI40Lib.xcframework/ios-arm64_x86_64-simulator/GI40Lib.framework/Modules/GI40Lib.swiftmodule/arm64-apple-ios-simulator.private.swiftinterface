@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name GI40Lib
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import Alamofire
 import AlamofireImage
 import Apollo
+import DeveloperToolsSupport
 import Foundation
 @_exported import GI40Lib
 import JavaScriptCore
@@ -16,12 +17,14 @@ import RealmSwift
 import SafariServices
 import Security
 import Swift
+import SwiftUI
 import SystemConfiguration
 import UIKit
 import Vision
 import XLActionController
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MedicineSection : RealmSwift.Object {
   @objc dynamic public var title: Swift.String?
   @objc dynamic public var content: Swift.String?
@@ -41,6 +44,8 @@ public protocol MedicineVCDelegate {
   @objc dynamic public var giName: Swift.String?
   @objc dynamic public var giid: Swift.String?
   @objc dynamic public var company: Swift.String?
+  @objc dynamic public var companyLogoUrl: Swift.String?
+  @objc dynamic public var pdfUrl: Swift.String?
   @objc dynamic public var timeliness: Swift.String?
   @objc dynamic public var ingredients: Swift.String?
   @objc dynamic public var headline: Swift.String?
@@ -118,7 +123,7 @@ extension GI40Lib.Mapper where N : Swift.Hashable {
   final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
   final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SearchVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UISearchBarDelegate {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SearchVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
   @_Concurrency.MainActor(unsafe) public var defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem?
   @_Concurrency.MainActor(unsafe) public static func create(defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem? = nil) -> UIKit.UIViewController
   @_Concurrency.MainActor(unsafe) public static func create(manufacturer: GI40Lib.ManufacturerElement) -> GI40Lib.SearchVC
@@ -128,9 +133,6 @@ extension GI40Lib.Mapper where N : Swift.Hashable {
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc public func searchBarShouldEndEditing(_ searchBar: UIKit.UISearchBar) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
-  @_Concurrency.MainActor(unsafe) @objc public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -144,7 +146,8 @@ open class TransformOf<ObjectType, JSONType> : GI40Lib.TransformType {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class HistoryVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor(unsafe) public static func create() -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) public var defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem?
+  @_Concurrency.MainActor(unsafe) public static func create(defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem? = nil) -> UIKit.UIViewController
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
@@ -193,7 +196,7 @@ final public class GetGidocumentQuery : Apollo.GraphQLQuery {
         get
       }
       public init(unsafeResultMap: Apollo.ResultMap)
-      public init(id: Apollo.GraphQLID? = nil, giid: Swift.String? = nil, company: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Company? = nil, giname: Swift.String? = nil, timeliness: Swift.String? = nil, pisstatus: Swift.String? = nil, pisversion: Swift.String? = nil, timelinessold: Swift.String? = nil, changedchapters: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Changedchapter?]? = nil, companyname: Swift.String? = nil, ingredients: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Ingredient?]? = nil, packages: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Package?]? = nil, headline: Swift.String? = nil, headertexttop: Swift.String? = nil, useradvicetitle: Swift.String? = nil, useradvicecontent: Swift.String? = nil, toctitle: Swift.String? = nil, tocentry: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Tocentry?]? = nil, headertextbottom: Swift.String? = nil, indicationstitle: Swift.String? = nil, indicationscontent: Swift.String? = nil, precautionstitle: Swift.String? = nil, precautionscontent: Swift.String? = nil, applicationtitle: Swift.String? = nil, applicationcontent: Swift.String? = nil, adversereactionstitle: Swift.String? = nil, adversereactionscontent: Swift.String? = nil, storagetitle: Swift.String? = nil, storagecontent: Swift.String? = nil, additionalinfotitle: Swift.String? = nil, additionalinfocontent: Swift.String? = nil, additionalsections: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Additionalsection?]? = nil)
+      public init(id: Apollo.GraphQLID? = nil, giid: Swift.String? = nil, company: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Company? = nil, giname: Swift.String? = nil, pdffile: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Pdffile? = nil, timeliness: Swift.String? = nil, pisstatus: Swift.String? = nil, pisversion: Swift.String? = nil, timelinessold: Swift.String? = nil, changedchapters: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Changedchapter?]? = nil, companyname: Swift.String? = nil, ingredients: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Ingredient?]? = nil, packages: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Package?]? = nil, headline: Swift.String? = nil, headertexttop: Swift.String? = nil, useradvicetitle: Swift.String? = nil, useradvicecontent: Swift.String? = nil, toctitle: Swift.String? = nil, tocentry: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Tocentry?]? = nil, headertextbottom: Swift.String? = nil, indicationstitle: Swift.String? = nil, indicationscontent: Swift.String? = nil, precautionstitle: Swift.String? = nil, precautionscontent: Swift.String? = nil, applicationtitle: Swift.String? = nil, applicationcontent: Swift.String? = nil, adversereactionstitle: Swift.String? = nil, adversereactionscontent: Swift.String? = nil, storagetitle: Swift.String? = nil, storagecontent: Swift.String? = nil, additionalinfotitle: Swift.String? = nil, additionalinfocontent: Swift.String? = nil, additionalsections: [GI40Lib.GetGidocumentQuery.Data.GetGidocument.Additionalsection?]? = nil)
       public var __typename: Swift.String {
         get
         set
@@ -211,6 +214,10 @@ final public class GetGidocumentQuery : Apollo.GraphQLQuery {
         set
       }
       public var giname: Swift.String? {
+        get
+        set
+      }
+      public var pdffile: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Pdffile? {
         get
         set
       }
@@ -335,12 +342,58 @@ final public class GetGidocumentQuery : Apollo.GraphQLQuery {
           get
         }
         public init(unsafeResultMap: Apollo.ResultMap)
-        public init(companyname: Swift.String? = nil)
+        public init(companyname: Swift.String? = nil, companylogo: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Company.Companylogo? = nil)
         public var __typename: Swift.String {
           get
           set
         }
         public var companyname: Swift.String? {
+          get
+          set
+        }
+        public var companylogo: GI40Lib.GetGidocumentQuery.Data.GetGidocument.Company.Companylogo? {
+          get
+          set
+        }
+        public struct Companylogo : Apollo.GraphQLSelectionSet {
+          public static let possibleTypes: [Swift.String]
+          public static var selections: [any Apollo.GraphQLSelection] {
+            get
+          }
+          public var resultMap: Apollo.ResultMap {
+            get
+          }
+          public init(unsafeResultMap: Apollo.ResultMap)
+          public init(fullpath: Swift.String? = nil, thumb: Swift.String? = nil)
+          public var __typename: Swift.String {
+            get
+            set
+          }
+          public var fullpath: Swift.String? {
+            get
+            set
+          }
+          public var thumb: Swift.String? {
+            get
+            set
+          }
+        }
+      }
+      public struct Pdffile : Apollo.GraphQLSelectionSet {
+        public static let possibleTypes: [Swift.String]
+        public static var selections: [any Apollo.GraphQLSelection] {
+          get
+        }
+        public var resultMap: Apollo.ResultMap {
+          get
+        }
+        public init(unsafeResultMap: Apollo.ResultMap)
+        public init(fullpath: Swift.String? = nil)
+        public var __typename: Swift.String {
+          get
+          set
+        }
+        public var fullpath: Swift.String? {
           get
           set
         }
@@ -774,24 +827,13 @@ public struct DictionaryTransform<Key, Value> : GI40Lib.TransformType where Key 
 }
 public struct MedicinePageInfo {
 }
-public enum AffectedButton {
-  case scrollDown
-  case fontSize
-  public static func == (a: GI40Lib.AffectedButton, b: GI40Lib.AffectedButton) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineDetailVC : UIKit.UIViewController, UIKit.UIScrollViewDelegate, UIKit.UIWebViewDelegate, UIKit.UISearchBarDelegate {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineDetailVC : UIKit.UIViewController, UIKit.UIScrollViewDelegate, UIKit.UIWebViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
   @_Concurrency.MainActor(unsafe) @objc public func webViewDidFinishLoad(_ webView: UIKit.UIWebView)
-  @_Concurrency.MainActor(unsafe) @objc public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
-  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -1100,6 +1142,7 @@ public protocol NotificationControllerDelegate : AnyObject {
   @objc deinit
 }
 public enum MedicineRowTypes {
+  case companyLogo
   case header
   case useradvice
   case indications
@@ -1121,19 +1164,22 @@ public enum AdditionalMaterialType {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UIScrollViewDelegate, UIKit.UISearchBarDelegate {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MedicineVC : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) public var defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem?
   @_Concurrency.MainActor(unsafe) public var searchResults: [[Swift.String : Any]]
   @_Concurrency.MainActor(unsafe) public static func create(objectId: Swift.Int) -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) public static func createSearchInstance(objectId: Swift.Int, searchResults: Swift.Array<Swift.Dictionary<Swift.String, Any>>, searchTerm: Swift.String) -> UIKit.UIViewController
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
-  @_Concurrency.MainActor(unsafe) @objc public func searchBarCancelButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor(unsafe) public func searchButtonClicked()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -1163,18 +1209,26 @@ public struct FontList {
   }
 }
 @objc @_hasMissingDesignatedInitializers public class BarCodeResult : ObjectiveC.NSObject {
+  public enum BarCodeType {
+    case PZN
+    case GTIN
+    case EAN
+    public static func == (a: GI40Lib.BarCodeResult.BarCodeType, b: GI40Lib.BarCodeResult.BarCodeType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public var pzn: Swift.String?
   public var lot: Swift.String?
   public var expiry: Foundation.Date?
   public var serial: Swift.String?
-  public var isGTIN: Swift.Bool
+  public var type: GI40Lib.BarCodeResult.BarCodeType?
   @objc deinit
 }
 extension Swift.String {
-  public func stringWithouthHTMLTags() -> Swift.String
-  public var html2AttributedString: Foundation.NSMutableAttributedString? {
-    get
-  }
+  public func stringWithoutHTMLTags() -> Swift.String
+  public func html2AttributedString(regularFont: UIKit.UIFont? = UIFont(name: "HelveticaNeue", size: 17), boldFont: UIKit.UIFont? = UIFont(name: "HelveticaNeue-Bold", size: 17)) -> Foundation.NSMutableAttributedString?
 }
 @_hasMissingDesignatedInitializers public class AdditionalSection {
   public var order: Swift.Int
@@ -1304,8 +1358,10 @@ public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : Swift.SignedInt
 public func <- <T>(left: inout T, right: GI40Lib.Map) where T : Swift.UnsignedInteger
 public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : Swift.UnsignedInteger
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ScanVC : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public static func create() -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) public static func create(defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem? = nil) -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) public var defaultRightBarButtonForMedicineVC: UIKit.UIBarButtonItem?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -1313,10 +1369,10 @@ public func <- <T>(left: inout T?, right: GI40Lib.Map) where T : Swift.UnsignedI
 }
 extension GI40Lib.MappingType : Swift.Equatable {}
 extension GI40Lib.MappingType : Swift.Hashable {}
-extension GI40Lib.AffectedButton : Swift.Equatable {}
-extension GI40Lib.AffectedButton : Swift.Hashable {}
 extension GI40Lib.AdditionalMaterialType : Swift.Equatable {}
 extension GI40Lib.AdditionalMaterialType : Swift.Hashable {}
+extension GI40Lib.BarCodeResult.BarCodeType : Swift.Equatable {}
+extension GI40Lib.BarCodeResult.BarCodeType : Swift.Hashable {}
 extension GI40Lib.DateTransform.Unit : Swift.Equatable {}
 extension GI40Lib.DateTransform.Unit : Swift.Hashable {}
 extension GI40Lib.DateTransform.Unit : Swift.RawRepresentable {}

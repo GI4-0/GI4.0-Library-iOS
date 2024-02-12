@@ -1,0 +1,1168 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66717E842B7A5BD900154044 /* giApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66717E832B7A5BD900154044 /* giApp.swift */; };
+		66717E862B7A5BD900154044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66717E852B7A5BD900154044 /* ContentView.swift */; };
+		66717E882B7A5BDB00154044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66717E872B7A5BDB00154044 /* Assets.xcassets */; };
+		66717E8B2B7A5BDB00154044 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66717E8A2B7A5BDB00154044 /* Preview Assets.xcassets */; };
+		66EC67472B7A6F6A00CFA6FB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 66EC67462B7A6F6A00CFA6FB /* Localizable.xcstrings */; };
+		66EC67742B7A907500CFA6FB /* giApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66717E832B7A5BD900154044 /* giApp.swift */; };
+		66EC67752B7A907600CFA6FB /* giApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66717E832B7A5BD900154044 /* giApp.swift */; };
+		66EC67792B7A908500CFA6FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66717E852B7A5BD900154044 /* ContentView.swift */; };
+		66EC677A2B7A908600CFA6FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66717E852B7A5BD900154044 /* ContentView.swift */; };
+		66EC677B2B7A908900CFA6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66717E872B7A5BDB00154044 /* Assets.xcassets */; };
+		66EC677C2B7A908A00CFA6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66717E872B7A5BDB00154044 /* Assets.xcassets */; };
+		66EC677D2B7A908F00CFA6FB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 66EC67462B7A6F6A00CFA6FB /* Localizable.xcstrings */; };
+		66EC677E2B7A909000CFA6FB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 66EC67462B7A6F6A00CFA6FB /* Localizable.xcstrings */; };
+		66EC677F2B7A90F800CFA6FB /* GI40Lib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC673B2B7A632000CFA6FB /* GI40Lib.xcframework */; };
+		66EC67812B7A90FF00CFA6FB /* GI40Lib in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67802B7A90FF00CFA6FB /* GI40Lib */; };
+		66EC67832B7A91F000CFA6FB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67822B7A91F000CFA6FB /* Apollo */; };
+		66EC67852B7A91F000CFA6FB /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67842B7A91F000CFA6FB /* Apollo-Dynamic */; };
+		66EC67872B7A91F000CFA6FB /* Apollo-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67842B7A91F000CFA6FB /* Apollo-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		66EC67892B7A91F000CFA6FB /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67882B7A91F000CFA6FB /* ApolloAPI */; };
+		66EC678B2B7A91F000CFA6FB /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC678A2B7A91F000CFA6FB /* ApolloCodegenLib */; };
+		66EC678D2B7A91F000CFA6FB /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC678C2B7A91F000CFA6FB /* ApolloSQLite */; };
+		66EC678F2B7A91F000CFA6FB /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC678E2B7A91F000CFA6FB /* ApolloUtils */; };
+		66EC67912B7A91F000CFA6FB /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67902B7A91F000CFA6FB /* ApolloWebSocket */; };
+		66EC67932B7A91F000CFA6FB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67922B7A91F000CFA6FB /* Alamofire */; };
+		66EC67952B7A91F000CFA6FB /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67942B7A91F000CFA6FB /* AlamofireImage */; };
+		66EC67972B7A91F000CFA6FB /* MatomoTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67962B7A91F000CFA6FB /* MatomoTracker */; };
+		66EC67992B7A91F000CFA6FB /* XLActionController in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67982B7A91F000CFA6FB /* XLActionController */; };
+		66EC679B2B7A91F000CFA6FB /* XLActionControllerPeriscope in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC679A2B7A91F000CFA6FB /* XLActionControllerPeriscope */; };
+		66EC679D2B7A91F000CFA6FB /* XLActionControllerSkype in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC679C2B7A91F000CFA6FB /* XLActionControllerSkype */; };
+		66EC679F2B7A91F000CFA6FB /* XLActionControllerSpotify in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC679E2B7A91F000CFA6FB /* XLActionControllerSpotify */; };
+		66EC67A12B7A91F000CFA6FB /* XLActionControllerTweetbot in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67A02B7A91F000CFA6FB /* XLActionControllerTweetbot */; };
+		66EC67A32B7A91F000CFA6FB /* XLActionControllerTwitter in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67A22B7A91F000CFA6FB /* XLActionControllerTwitter */; };
+		66EC67A52B7A91F000CFA6FB /* XLActionControllerYoutube in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67A42B7A91F000CFA6FB /* XLActionControllerYoutube */; };
+		66EC67A62B7A926C00CFA6FB /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC673F2B7A653300CFA6FB /* Realm.xcframework */; };
+		66EC67A72B7A926C00CFA6FB /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC67402B7A653300CFA6FB /* RealmSwift.xcframework */; };
+		66EC67A92B7A92C600CFA6FB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67A82B7A92C600CFA6FB /* Apollo */; };
+		66EC67AB2B7A92C600CFA6FB /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67AA2B7A92C600CFA6FB /* Apollo-Dynamic */; };
+		66EC67AD2B7A92C600CFA6FB /* Apollo-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67AA2B7A92C600CFA6FB /* Apollo-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		66EC67AF2B7A92C600CFA6FB /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67AE2B7A92C600CFA6FB /* ApolloAPI */; };
+		66EC67B12B7A92C600CFA6FB /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67B02B7A92C600CFA6FB /* ApolloCodegenLib */; };
+		66EC67B32B7A92C600CFA6FB /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67B22B7A92C600CFA6FB /* ApolloSQLite */; };
+		66EC67B52B7A92C600CFA6FB /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67B42B7A92C600CFA6FB /* ApolloUtils */; };
+		66EC67B72B7A92C600CFA6FB /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67B62B7A92C600CFA6FB /* ApolloWebSocket */; };
+		66EC67B92B7A92C600CFA6FB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67B82B7A92C600CFA6FB /* Alamofire */; };
+		66EC67BB2B7A92C600CFA6FB /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67BA2B7A92C600CFA6FB /* AlamofireImage */; };
+		66EC67BD2B7A92C600CFA6FB /* MatomoTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67BC2B7A92C600CFA6FB /* MatomoTracker */; };
+		66EC67BF2B7A92C600CFA6FB /* XLActionController in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67BE2B7A92C600CFA6FB /* XLActionController */; };
+		66EC67C12B7A92C600CFA6FB /* XLActionControllerPeriscope in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67C02B7A92C600CFA6FB /* XLActionControllerPeriscope */; };
+		66EC67C32B7A92C600CFA6FB /* XLActionControllerSkype in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67C22B7A92C600CFA6FB /* XLActionControllerSkype */; };
+		66EC67C52B7A92C600CFA6FB /* XLActionControllerSpotify in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67C42B7A92C600CFA6FB /* XLActionControllerSpotify */; };
+		66EC67C72B7A92C600CFA6FB /* XLActionControllerTweetbot in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67C62B7A92C600CFA6FB /* XLActionControllerTweetbot */; };
+		66EC67C92B7A92C600CFA6FB /* XLActionControllerTwitter in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67C82B7A92C600CFA6FB /* XLActionControllerTwitter */; };
+		66EC67CB2B7A92C600CFA6FB /* XLActionControllerYoutube in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67CA2B7A92C600CFA6FB /* XLActionControllerYoutube */; };
+		66EC67CC2B7A92C600CFA6FB /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC673F2B7A653300CFA6FB /* Realm.xcframework */; };
+		66EC67CD2B7A92C600CFA6FB /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC67402B7A653300CFA6FB /* RealmSwift.xcframework */; };
+		66EC67CF2B7A930000CFA6FB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67CE2B7A930000CFA6FB /* Apollo */; };
+		66EC67D12B7A930000CFA6FB /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67D02B7A930000CFA6FB /* Apollo-Dynamic */; };
+		66EC67D32B7A930000CFA6FB /* Apollo-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67D02B7A930000CFA6FB /* Apollo-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		66EC67D52B7A930000CFA6FB /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67D42B7A930000CFA6FB /* ApolloAPI */; };
+		66EC67D72B7A930000CFA6FB /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67D62B7A930000CFA6FB /* ApolloCodegenLib */; };
+		66EC67D92B7A930000CFA6FB /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67D82B7A930000CFA6FB /* ApolloSQLite */; };
+		66EC67DB2B7A930000CFA6FB /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67DA2B7A930000CFA6FB /* ApolloUtils */; };
+		66EC67DD2B7A930000CFA6FB /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67DC2B7A930000CFA6FB /* ApolloWebSocket */; };
+		66EC67DF2B7A930000CFA6FB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67DE2B7A930000CFA6FB /* Alamofire */; };
+		66EC67E12B7A930000CFA6FB /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67E02B7A930000CFA6FB /* AlamofireImage */; };
+		66EC67E32B7A930000CFA6FB /* MatomoTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67E22B7A930000CFA6FB /* MatomoTracker */; };
+		66EC67E52B7A930000CFA6FB /* XLActionController in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67E42B7A930000CFA6FB /* XLActionController */; };
+		66EC67E72B7A930000CFA6FB /* XLActionControllerPeriscope in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67E62B7A930000CFA6FB /* XLActionControllerPeriscope */; };
+		66EC67E92B7A930000CFA6FB /* XLActionControllerSkype in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67E82B7A930000CFA6FB /* XLActionControllerSkype */; };
+		66EC67EB2B7A930000CFA6FB /* XLActionControllerSpotify in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67EA2B7A930000CFA6FB /* XLActionControllerSpotify */; };
+		66EC67ED2B7A930000CFA6FB /* XLActionControllerTweetbot in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67EC2B7A930000CFA6FB /* XLActionControllerTweetbot */; };
+		66EC67EF2B7A930000CFA6FB /* XLActionControllerTwitter in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67EE2B7A930000CFA6FB /* XLActionControllerTwitter */; };
+		66EC67F12B7A930000CFA6FB /* XLActionControllerYoutube in Frameworks */ = {isa = PBXBuildFile; productRef = 66EC67F02B7A930000CFA6FB /* XLActionControllerYoutube */; };
+		66EC67F22B7A930000CFA6FB /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC673F2B7A653300CFA6FB /* Realm.xcframework */; };
+		66EC67F32B7A930000CFA6FB /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC67402B7A653300CFA6FB /* RealmSwift.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66EC67862B7A91F000CFA6FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66EC67872B7A91F000CFA6FB /* Apollo-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67AC2B7A92C600CFA6FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66EC67AD2B7A92C600CFA6FB /* Apollo-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67D22B7A930000CFA6FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66EC67D32B7A930000CFA6FB /* Apollo-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		66717E802B7A5BD900154044 /* gi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66717E832B7A5BD900154044 /* giApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giApp.swift; sourceTree = "<group>"; };
+		66717E852B7A5BD900154044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66717E872B7A5BDB00154044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66717E8A2B7A5BDB00154044 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		66EC673B2B7A632000CFA6FB /* GI40Lib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GI40Lib.xcframework; path = ../Sources/GI40Lib.xcframework; sourceTree = "<group>"; };
+		66EC673F2B7A653300CFA6FB /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Realm.xcframework; sourceTree = "<group>"; };
+		66EC67402B7A653300CFA6FB /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RealmSwift.xcframework; sourceTree = "<group>"; };
+		66EC67432B7A6E3B00CFA6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		66EC67462B7A6F6A00CFA6FB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		66EC67542B7A8F8700CFA6FB /* remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EC67662B7A8FB000CFA6FB /* local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = local.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66717E7D2B7A5BD900154044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC67F22B7A930000CFA6FB /* Realm.xcframework in Frameworks */,
+				66EC67F32B7A930000CFA6FB /* RealmSwift.xcframework in Frameworks */,
+				66EC67E32B7A930000CFA6FB /* MatomoTracker in Frameworks */,
+				66EC67ED2B7A930000CFA6FB /* XLActionControllerTweetbot in Frameworks */,
+				66EC67EF2B7A930000CFA6FB /* XLActionControllerTwitter in Frameworks */,
+				66EC67D52B7A930000CFA6FB /* ApolloAPI in Frameworks */,
+				66EC67DF2B7A930000CFA6FB /* Alamofire in Frameworks */,
+				66EC67E12B7A930000CFA6FB /* AlamofireImage in Frameworks */,
+				66EC67CF2B7A930000CFA6FB /* Apollo in Frameworks */,
+				66EC67D92B7A930000CFA6FB /* ApolloSQLite in Frameworks */,
+				66EC67D12B7A930000CFA6FB /* Apollo-Dynamic in Frameworks */,
+				66EC67F12B7A930000CFA6FB /* XLActionControllerYoutube in Frameworks */,
+				66EC67E72B7A930000CFA6FB /* XLActionControllerPeriscope in Frameworks */,
+				66EC67E52B7A930000CFA6FB /* XLActionController in Frameworks */,
+				66EC67DD2B7A930000CFA6FB /* ApolloWebSocket in Frameworks */,
+				66EC67D72B7A930000CFA6FB /* ApolloCodegenLib in Frameworks */,
+				66EC67DB2B7A930000CFA6FB /* ApolloUtils in Frameworks */,
+				66EC67E92B7A930000CFA6FB /* XLActionControllerSkype in Frameworks */,
+				66EC67EB2B7A930000CFA6FB /* XLActionControllerSpotify in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67512B7A8F8700CFA6FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC67A62B7A926C00CFA6FB /* Realm.xcframework in Frameworks */,
+				66EC67A72B7A926C00CFA6FB /* RealmSwift.xcframework in Frameworks */,
+				66EC67932B7A91F000CFA6FB /* Alamofire in Frameworks */,
+				66EC67A32B7A91F000CFA6FB /* XLActionControllerTwitter in Frameworks */,
+				66EC679D2B7A91F000CFA6FB /* XLActionControllerSkype in Frameworks */,
+				66EC678B2B7A91F000CFA6FB /* ApolloCodegenLib in Frameworks */,
+				66EC67812B7A90FF00CFA6FB /* GI40Lib in Frameworks */,
+				66EC67832B7A91F000CFA6FB /* Apollo in Frameworks */,
+				66EC67892B7A91F000CFA6FB /* ApolloAPI in Frameworks */,
+				66EC678F2B7A91F000CFA6FB /* ApolloUtils in Frameworks */,
+				66EC67912B7A91F000CFA6FB /* ApolloWebSocket in Frameworks */,
+				66EC679B2B7A91F000CFA6FB /* XLActionControllerPeriscope in Frameworks */,
+				66EC67952B7A91F000CFA6FB /* AlamofireImage in Frameworks */,
+				66EC67992B7A91F000CFA6FB /* XLActionController in Frameworks */,
+				66EC67852B7A91F000CFA6FB /* Apollo-Dynamic in Frameworks */,
+				66EC67972B7A91F000CFA6FB /* MatomoTracker in Frameworks */,
+				66EC67A52B7A91F000CFA6FB /* XLActionControllerYoutube in Frameworks */,
+				66EC678D2B7A91F000CFA6FB /* ApolloSQLite in Frameworks */,
+				66EC67A12B7A91F000CFA6FB /* XLActionControllerTweetbot in Frameworks */,
+				66EC679F2B7A91F000CFA6FB /* XLActionControllerSpotify in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67632B7A8FB000CFA6FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC677F2B7A90F800CFA6FB /* GI40Lib.xcframework in Frameworks */,
+				66EC67CC2B7A92C600CFA6FB /* Realm.xcframework in Frameworks */,
+				66EC67CD2B7A92C600CFA6FB /* RealmSwift.xcframework in Frameworks */,
+				66EC67B92B7A92C600CFA6FB /* Alamofire in Frameworks */,
+				66EC67C92B7A92C600CFA6FB /* XLActionControllerTwitter in Frameworks */,
+				66EC67C32B7A92C600CFA6FB /* XLActionControllerSkype in Frameworks */,
+				66EC67B12B7A92C600CFA6FB /* ApolloCodegenLib in Frameworks */,
+				66EC67A92B7A92C600CFA6FB /* Apollo in Frameworks */,
+				66EC67AF2B7A92C600CFA6FB /* ApolloAPI in Frameworks */,
+				66EC67B52B7A92C600CFA6FB /* ApolloUtils in Frameworks */,
+				66EC67B72B7A92C600CFA6FB /* ApolloWebSocket in Frameworks */,
+				66EC67C12B7A92C600CFA6FB /* XLActionControllerPeriscope in Frameworks */,
+				66EC67BB2B7A92C600CFA6FB /* AlamofireImage in Frameworks */,
+				66EC67BF2B7A92C600CFA6FB /* XLActionController in Frameworks */,
+				66EC67AB2B7A92C600CFA6FB /* Apollo-Dynamic in Frameworks */,
+				66EC67BD2B7A92C600CFA6FB /* MatomoTracker in Frameworks */,
+				66EC67CB2B7A92C600CFA6FB /* XLActionControllerYoutube in Frameworks */,
+				66EC67B32B7A92C600CFA6FB /* ApolloSQLite in Frameworks */,
+				66EC67C72B7A92C600CFA6FB /* XLActionControllerTweetbot in Frameworks */,
+				66EC67C52B7A92C600CFA6FB /* XLActionControllerSpotify in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66717E772B7A5BD900154044 = {
+			isa = PBXGroup;
+			children = (
+				66717E822B7A5BD900154044 /* gi */,
+				66EC67552B7A8F8700CFA6FB /* remote */,
+				66EC67672B7A8FB000CFA6FB /* local */,
+				66717E812B7A5BD900154044 /* Products */,
+				66EC673A2B7A632000CFA6FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		66717E812B7A5BD900154044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66717E802B7A5BD900154044 /* gi.app */,
+				66EC67542B7A8F8700CFA6FB /* remote.app */,
+				66EC67662B7A8FB000CFA6FB /* local.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66717E822B7A5BD900154044 /* gi */ = {
+			isa = PBXGroup;
+			children = (
+				66EC67432B7A6E3B00CFA6FB /* Info.plist */,
+				66717E832B7A5BD900154044 /* giApp.swift */,
+				66717E852B7A5BD900154044 /* ContentView.swift */,
+				66717E872B7A5BDB00154044 /* Assets.xcassets */,
+				66717E892B7A5BDB00154044 /* Preview Content */,
+				66EC67462B7A6F6A00CFA6FB /* Localizable.xcstrings */,
+			);
+			path = gi;
+			sourceTree = "<group>";
+		};
+		66717E892B7A5BDB00154044 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				66717E8A2B7A5BDB00154044 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		66EC673A2B7A632000CFA6FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66EC673F2B7A653300CFA6FB /* Realm.xcframework */,
+				66EC67402B7A653300CFA6FB /* RealmSwift.xcframework */,
+				66EC673B2B7A632000CFA6FB /* GI40Lib.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66EC67552B7A8F8700CFA6FB /* remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		66EC67672B7A8FB000CFA6FB /* local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66717E7F2B7A5BD900154044 /* gi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66717E8E2B7A5BDB00154044 /* Build configuration list for PBXNativeTarget "gi" */;
+			buildPhases = (
+				66717E7C2B7A5BD900154044 /* Sources */,
+				66717E7D2B7A5BD900154044 /* Frameworks */,
+				66717E7E2B7A5BD900154044 /* Resources */,
+				66EC67D22B7A930000CFA6FB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gi;
+			packageProductDependencies = (
+				66EC67CE2B7A930000CFA6FB /* Apollo */,
+				66EC67D02B7A930000CFA6FB /* Apollo-Dynamic */,
+				66EC67D42B7A930000CFA6FB /* ApolloAPI */,
+				66EC67D62B7A930000CFA6FB /* ApolloCodegenLib */,
+				66EC67D82B7A930000CFA6FB /* ApolloSQLite */,
+				66EC67DA2B7A930000CFA6FB /* ApolloUtils */,
+				66EC67DC2B7A930000CFA6FB /* ApolloWebSocket */,
+				66EC67DE2B7A930000CFA6FB /* Alamofire */,
+				66EC67E02B7A930000CFA6FB /* AlamofireImage */,
+				66EC67E22B7A930000CFA6FB /* MatomoTracker */,
+				66EC67E42B7A930000CFA6FB /* XLActionController */,
+				66EC67E62B7A930000CFA6FB /* XLActionControllerPeriscope */,
+				66EC67E82B7A930000CFA6FB /* XLActionControllerSkype */,
+				66EC67EA2B7A930000CFA6FB /* XLActionControllerSpotify */,
+				66EC67EC2B7A930000CFA6FB /* XLActionControllerTweetbot */,
+				66EC67EE2B7A930000CFA6FB /* XLActionControllerTwitter */,
+				66EC67F02B7A930000CFA6FB /* XLActionControllerYoutube */,
+			);
+			productName = gi;
+			productReference = 66717E802B7A5BD900154044 /* gi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66EC67532B7A8F8700CFA6FB /* remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66EC675F2B7A8F8900CFA6FB /* Build configuration list for PBXNativeTarget "remote" */;
+			buildPhases = (
+				66EC67502B7A8F8700CFA6FB /* Sources */,
+				66EC67512B7A8F8700CFA6FB /* Frameworks */,
+				66EC67522B7A8F8700CFA6FB /* Resources */,
+				66EC67862B7A91F000CFA6FB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = remote;
+			packageProductDependencies = (
+				66EC67802B7A90FF00CFA6FB /* GI40Lib */,
+				66EC67822B7A91F000CFA6FB /* Apollo */,
+				66EC67842B7A91F000CFA6FB /* Apollo-Dynamic */,
+				66EC67882B7A91F000CFA6FB /* ApolloAPI */,
+				66EC678A2B7A91F000CFA6FB /* ApolloCodegenLib */,
+				66EC678C2B7A91F000CFA6FB /* ApolloSQLite */,
+				66EC678E2B7A91F000CFA6FB /* ApolloUtils */,
+				66EC67902B7A91F000CFA6FB /* ApolloWebSocket */,
+				66EC67922B7A91F000CFA6FB /* Alamofire */,
+				66EC67942B7A91F000CFA6FB /* AlamofireImage */,
+				66EC67962B7A91F000CFA6FB /* MatomoTracker */,
+				66EC67982B7A91F000CFA6FB /* XLActionController */,
+				66EC679A2B7A91F000CFA6FB /* XLActionControllerPeriscope */,
+				66EC679C2B7A91F000CFA6FB /* XLActionControllerSkype */,
+				66EC679E2B7A91F000CFA6FB /* XLActionControllerSpotify */,
+				66EC67A02B7A91F000CFA6FB /* XLActionControllerTweetbot */,
+				66EC67A22B7A91F000CFA6FB /* XLActionControllerTwitter */,
+				66EC67A42B7A91F000CFA6FB /* XLActionControllerYoutube */,
+			);
+			productName = remote;
+			productReference = 66EC67542B7A8F8700CFA6FB /* remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66EC67652B7A8FB000CFA6FB /* local */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66EC67712B7A8FB200CFA6FB /* Build configuration list for PBXNativeTarget "local" */;
+			buildPhases = (
+				66EC67622B7A8FB000CFA6FB /* Sources */,
+				66EC67632B7A8FB000CFA6FB /* Frameworks */,
+				66EC67642B7A8FB000CFA6FB /* Resources */,
+				66EC67AC2B7A92C600CFA6FB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = local;
+			packageProductDependencies = (
+				66EC67A82B7A92C600CFA6FB /* Apollo */,
+				66EC67AA2B7A92C600CFA6FB /* Apollo-Dynamic */,
+				66EC67AE2B7A92C600CFA6FB /* ApolloAPI */,
+				66EC67B02B7A92C600CFA6FB /* ApolloCodegenLib */,
+				66EC67B22B7A92C600CFA6FB /* ApolloSQLite */,
+				66EC67B42B7A92C600CFA6FB /* ApolloUtils */,
+				66EC67B62B7A92C600CFA6FB /* ApolloWebSocket */,
+				66EC67B82B7A92C600CFA6FB /* Alamofire */,
+				66EC67BA2B7A92C600CFA6FB /* AlamofireImage */,
+				66EC67BC2B7A92C600CFA6FB /* MatomoTracker */,
+				66EC67BE2B7A92C600CFA6FB /* XLActionController */,
+				66EC67C02B7A92C600CFA6FB /* XLActionControllerPeriscope */,
+				66EC67C22B7A92C600CFA6FB /* XLActionControllerSkype */,
+				66EC67C42B7A92C600CFA6FB /* XLActionControllerSpotify */,
+				66EC67C62B7A92C600CFA6FB /* XLActionControllerTweetbot */,
+				66EC67C82B7A92C600CFA6FB /* XLActionControllerTwitter */,
+				66EC67CA2B7A92C600CFA6FB /* XLActionControllerYoutube */,
+			);
+			productName = local;
+			productReference = 66EC67662B7A8FB000CFA6FB /* local.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66717E782B7A5BD900154044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					66717E7F2B7A5BD900154044 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					66EC67532B7A8F8700CFA6FB = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					66EC67652B7A8FB000CFA6FB = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 66717E7B2B7A5BD900154044 /* Build configuration list for PBXProject "gi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 66717E772B7A5BD900154044;
+			packageReferences = (
+				66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				66EC66FD2B7A5DB300CFA6FB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				66EC67002B7A5DCA00CFA6FB /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				66EC67032B7A5DE600CFA6FB /* XCRemoteSwiftPackageReference "matomo-sdk-ios" */,
+				66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */,
+				66EC67372B7A610D00CFA6FB /* XCRemoteSwiftPackageReference "GI4" */,
+			);
+			productRefGroup = 66717E812B7A5BD900154044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66717E7F2B7A5BD900154044 /* gi */,
+				66EC67652B7A8FB000CFA6FB /* local */,
+				66EC67532B7A8F8700CFA6FB /* remote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66717E7E2B7A5BD900154044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66717E8B2B7A5BDB00154044 /* Preview Assets.xcassets in Resources */,
+				66717E882B7A5BDB00154044 /* Assets.xcassets in Resources */,
+				66EC67472B7A6F6A00CFA6FB /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67522B7A8F8700CFA6FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC677C2B7A908A00CFA6FB /* Assets.xcassets in Resources */,
+				66EC677E2B7A909000CFA6FB /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67642B7A8FB000CFA6FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC677B2B7A908900CFA6FB /* Assets.xcassets in Resources */,
+				66EC677D2B7A908F00CFA6FB /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66717E7C2B7A5BD900154044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66717E862B7A5BD900154044 /* ContentView.swift in Sources */,
+				66717E842B7A5BD900154044 /* giApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67502B7A8F8700CFA6FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC677A2B7A908600CFA6FB /* ContentView.swift in Sources */,
+				66EC67752B7A907600CFA6FB /* giApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EC67622B7A8FB000CFA6FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EC67792B7A908500CFA6FB /* ContentView.swift in Sources */,
+				66EC67742B7A907500CFA6FB /* giApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		66717E8C2B7A5BDB00154044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66717E8D2B7A5BDB00154044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66717E8F2B7A5BDB00154044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.gi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66717E902B7A5BDB00154044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.gi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66EC67602B7A8F8900CFA6FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"remote/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.remote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66EC67612B7A8F8900CFA6FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"remote/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.remote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66EC67722B7A8FB200CFA6FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"local/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.local;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66EC67732B7A8FB200CFA6FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"local/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.local;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66717E7B2B7A5BD900154044 /* Build configuration list for PBXProject "gi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66717E8C2B7A5BDB00154044 /* Debug */,
+				66717E8D2B7A5BDB00154044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66717E8E2B7A5BDB00154044 /* Build configuration list for PBXNativeTarget "gi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66717E8F2B7A5BDB00154044 /* Debug */,
+				66717E902B7A5BDB00154044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66EC675F2B7A8F8900CFA6FB /* Build configuration list for PBXNativeTarget "remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EC67602B7A8F8900CFA6FB /* Debug */,
+				66EC67612B7A8F8900CFA6FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66EC67712B7A8FB200CFA6FB /* Build configuration list for PBXNativeTarget "local" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EC67722B7A8FB200CFA6FB /* Debug */,
+				66EC67732B7A8FB200CFA6FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.51.2;
+			};
+		};
+		66EC66FD2B7A5DB300CFA6FB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+		66EC67002B7A5DCA00CFA6FB /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		66EC67032B7A5DE600CFA6FB /* XCRemoteSwiftPackageReference "matomo-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matomo-org/matomo-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.1;
+			};
+		};
+		66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/XLActionController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		66EC67372B7A610D00CFA6FB /* XCRemoteSwiftPackageReference "GI4" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GI4-0/GI4.0-Library-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66EC67802B7A90FF00CFA6FB /* GI40Lib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67372B7A610D00CFA6FB /* XCRemoteSwiftPackageReference "GI4" */;
+			productName = GI40Lib;
+		};
+		66EC67822B7A91F000CFA6FB /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		66EC67842B7A91F000CFA6FB /* Apollo-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = "Apollo-Dynamic";
+		};
+		66EC67882B7A91F000CFA6FB /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		66EC678A2B7A91F000CFA6FB /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+		66EC678C2B7A91F000CFA6FB /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+		66EC678E2B7A91F000CFA6FB /* ApolloUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloUtils;
+		};
+		66EC67902B7A91F000CFA6FB /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		66EC67922B7A91F000CFA6FB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66FD2B7A5DB300CFA6FB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		66EC67942B7A91F000CFA6FB /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67002B7A5DCA00CFA6FB /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		66EC67962B7A91F000CFA6FB /* MatomoTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67032B7A5DE600CFA6FB /* XCRemoteSwiftPackageReference "matomo-sdk-ios" */;
+			productName = MatomoTracker;
+		};
+		66EC67982B7A91F000CFA6FB /* XLActionController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionController;
+		};
+		66EC679A2B7A91F000CFA6FB /* XLActionControllerPeriscope */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerPeriscope;
+		};
+		66EC679C2B7A91F000CFA6FB /* XLActionControllerSkype */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerSkype;
+		};
+		66EC679E2B7A91F000CFA6FB /* XLActionControllerSpotify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerSpotify;
+		};
+		66EC67A02B7A91F000CFA6FB /* XLActionControllerTweetbot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerTweetbot;
+		};
+		66EC67A22B7A91F000CFA6FB /* XLActionControllerTwitter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerTwitter;
+		};
+		66EC67A42B7A91F000CFA6FB /* XLActionControllerYoutube */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerYoutube;
+		};
+		66EC67A82B7A92C600CFA6FB /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		66EC67AA2B7A92C600CFA6FB /* Apollo-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = "Apollo-Dynamic";
+		};
+		66EC67AE2B7A92C600CFA6FB /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		66EC67B02B7A92C600CFA6FB /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+		66EC67B22B7A92C600CFA6FB /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+		66EC67B42B7A92C600CFA6FB /* ApolloUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloUtils;
+		};
+		66EC67B62B7A92C600CFA6FB /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		66EC67B82B7A92C600CFA6FB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66FD2B7A5DB300CFA6FB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		66EC67BA2B7A92C600CFA6FB /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67002B7A5DCA00CFA6FB /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		66EC67BC2B7A92C600CFA6FB /* MatomoTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67032B7A5DE600CFA6FB /* XCRemoteSwiftPackageReference "matomo-sdk-ios" */;
+			productName = MatomoTracker;
+		};
+		66EC67BE2B7A92C600CFA6FB /* XLActionController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionController;
+		};
+		66EC67C02B7A92C600CFA6FB /* XLActionControllerPeriscope */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerPeriscope;
+		};
+		66EC67C22B7A92C600CFA6FB /* XLActionControllerSkype */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerSkype;
+		};
+		66EC67C42B7A92C600CFA6FB /* XLActionControllerSpotify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerSpotify;
+		};
+		66EC67C62B7A92C600CFA6FB /* XLActionControllerTweetbot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerTweetbot;
+		};
+		66EC67C82B7A92C600CFA6FB /* XLActionControllerTwitter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerTwitter;
+		};
+		66EC67CA2B7A92C600CFA6FB /* XLActionControllerYoutube */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerYoutube;
+		};
+		66EC67CE2B7A930000CFA6FB /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		66EC67D02B7A930000CFA6FB /* Apollo-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = "Apollo-Dynamic";
+		};
+		66EC67D42B7A930000CFA6FB /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		66EC67D62B7A930000CFA6FB /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+		66EC67D82B7A930000CFA6FB /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+		66EC67DA2B7A930000CFA6FB /* ApolloUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloUtils;
+		};
+		66EC67DC2B7A930000CFA6FB /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66F22B7A5DA300CFA6FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		66EC67DE2B7A930000CFA6FB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC66FD2B7A5DB300CFA6FB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		66EC67E02B7A930000CFA6FB /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67002B7A5DCA00CFA6FB /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		66EC67E22B7A930000CFA6FB /* MatomoTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67032B7A5DE600CFA6FB /* XCRemoteSwiftPackageReference "matomo-sdk-ios" */;
+			productName = MatomoTracker;
+		};
+		66EC67E42B7A930000CFA6FB /* XLActionController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionController;
+		};
+		66EC67E62B7A930000CFA6FB /* XLActionControllerPeriscope */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerPeriscope;
+		};
+		66EC67E82B7A930000CFA6FB /* XLActionControllerSkype */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerSkype;
+		};
+		66EC67EA2B7A930000CFA6FB /* XLActionControllerSpotify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerSpotify;
+		};
+		66EC67EC2B7A930000CFA6FB /* XLActionControllerTweetbot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerTweetbot;
+		};
+		66EC67EE2B7A930000CFA6FB /* XLActionControllerTwitter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerTwitter;
+		};
+		66EC67F02B7A930000CFA6FB /* XLActionControllerYoutube */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EC67062B7A5E0500CFA6FB /* XCRemoteSwiftPackageReference "XLActionController" */;
+			productName = XLActionControllerYoutube;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 66717E782B7A5BD900154044 /* Project object */;
+}

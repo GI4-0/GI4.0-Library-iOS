@@ -4,7 +4,7 @@ var MyApp_SearchResultCount = 0;
 var MyApp_Search_Current = 0;
 
 // helper function, recursively searches in elements and their child nodes
-function MyApp_HighlightAllOccurencesOfStringForElement(element,keyword) {
+function MyApp_HighlightAllOccurrencesOfStringForElement(element,keyword) {
     if (element) {
         if (element.nodeType == 3) {        // Text node
             while (true) {
@@ -30,7 +30,7 @@ function MyApp_HighlightAllOccurencesOfStringForElement(element,keyword) {
         } else if (element.nodeType == 1) { // Element node
             if (element.style.display != "none" && element.nodeName.toLowerCase() != 'select') {
                 for (var i=element.childNodes.length-1; i>=0; i--) {
-                    MyApp_HighlightAllOccurencesOfStringForElement(element.childNodes[i],keyword);
+                    MyApp_HighlightAllOccurrencesOfStringForElement(element.childNodes[i],keyword);
                 }
             }
         }
@@ -38,9 +38,9 @@ function MyApp_HighlightAllOccurencesOfStringForElement(element,keyword) {
 }
 
 // the main entry point to start the search
-function MyApp_HighlightAllOccurencesOfString(keyword) {
+function MyApp_HighlightAllOccurrencesOfString(keyword) {
     MyApp_RemoveAllHighlights();
-    MyApp_HighlightAllOccurencesOfStringForElement(document.body, keyword.toLowerCase());
+    MyApp_HighlightAllOccurrencesOfStringForElement(document.body, keyword.toLowerCase());
 }
 
 function MyApp_NextHighlight() {

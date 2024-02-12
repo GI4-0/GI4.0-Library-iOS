@@ -1,7 +1,7 @@
 framework module GI40Lib {
   umbrella header "GI40Lib.h"
-
   export *
+
   module * { export * }
 }
 
